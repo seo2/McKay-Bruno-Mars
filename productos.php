@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row">
         <section class="productos ">
-          
+
           <div class="content_productos clearfix">
             <div class="heading_productos">
               <h3>¿QUÉ PRODUCTOS PARTICIPAN?<br><br></h3>
@@ -22,41 +22,39 @@
             </div>
             <div class="row">
             	<div class="col-md-8 col-md-offset-2">
-            		
+
 		            <div class="box_slider_productos">
-		                      <div class="slider_productos owl-carousel owl-theme">
-		                         <div class="item">
-		                           <img src="assets/img/productos/p1.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p2.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p3.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p4.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p5.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p6.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p7.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p8.png?v=2" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p9.png" class="center-block">
-		                         </div>
-		                         <div class="item">
-		                           <img src="assets/img/productos/p10.png" class="center-block">
-		                         </div>
-		                      
-		
+		                <div class="slider_productos owl-carousel owl-theme">
+                         <div class="item">
+                           <img src="assets/img/productos/p1.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p2.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p3.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p4.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p5.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p6.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p7.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p8.png?v=2" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p9.png" class="center-block">
+                         </div>
+                         <div class="item">
+                           <img src="assets/img/productos/p10.png" class="center-block">
+                         </div>
 		              </div> <!-- slider categoria -->
 		            </div> <!-- box slider -->
             	</div>
