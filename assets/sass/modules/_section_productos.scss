@@ -1,7 +1,7 @@
 section.productos{
   margin-top: 50px;
 
- 
+
     .content_productos{
 
      //   background: url(../img/bg_que_gano_lg.jpg) no-repeat;
@@ -94,19 +94,19 @@ section.productos{
        //   } // dots
 
          .owl-next, .owl-prev {
-                width:45px;
-                height: 42px;
+                widows: 40px !important;
+                height: 72px!important;
                 position: absolute;
                 text-indent: -9999px;
                 top: 50%;
-               margin-top: -21px;
+                margin-top: -21px;
                 cursor:pointer;
                // @include transition(all 0.2s ease-in-out);
                    &:hover {
                     background-color: transparent;
                     opacity: 0.5;
                   }
-           
+
          }
 
           .owl-next {
@@ -133,7 +133,7 @@ section.productos{
 
      }
 
-    
+
     } //content productos
 
 } // end productos

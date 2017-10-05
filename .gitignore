@@ -2,3 +2,4 @@
 *.codekit3
 assets/sass/.sass-cache/e7fd34000dbb62de6401c6a84a0b0eaad82c143f/_strip-unit.scssc
 *.scssc
+assets/img/.DS_Store

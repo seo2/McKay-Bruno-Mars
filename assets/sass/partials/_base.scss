@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6 {
   margin: 0;
   padding: 0;
 }
-//  remover bordes de links 
+//  remover bordes de links
 // ---------------------------------------
 a,
 textarea,
@@ -77,13 +77,13 @@ input[type="url"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
-.uneditable-input:focus {   
+.uneditable-input:focus {
   border-color: none;
   box-shadow:none;
   outline: 0 none;
 }
 
-// centra la navegacion hasta 769
+/* centra la navegacion hasta 769 */
 @media (min-width: 769px){
     .navbar-nav{
         float:none;
@@ -95,13 +95,13 @@ input[type="color"]:focus,
 @media (max-width: 768px){
     .navbar-nav{
         float:right;
-  
+
     }
 }
 @media (max-width: 767px){
     .navbar-nav{
         float:none;
-  
+
     }
 }
 

@@ -1,0 +1,80 @@
+body#home{
+  background: url(../img/bg-home.png) no-repeat;
+  background-position: center top;
+  background-color: #E31E26;
+}
+
+section.box-formulario-codigo{
+    min-height: 200px;
+    background-color: #534846;
+    margin: 50px 0;
+    padding: 30px 0;
+
+    .box_codigo{
+        padding: 0;
+        height: 200px;
+        margin-bottom: 0;
+        background: none;;
+        #form_codigo{
+
+          height: 100%;
+
+          .input_codigo{
+            margin-top: 30px;
+            margin-bottom: 0;
+            position: relative;
+
+          }
+          .btn_amarillo {
+            margin-top: 30px;
+            background: none;
+            background-color: #F8B031;
+            color: #534846;
+          }
+          #badge{
+             min-height: 200px;
+               position: relative;
+                img {
+                  @include centerer(true, true);
+                }
+
+
+          }
+          .nota{
+             @include black(12px, white);
+              text-transform: uppercase;
+          }
+          .checkbox{
+              @include black(12px, white);
+              text-transform: uppercase;
+
+          }
+          .nota,.checkbox{
+            margin-top: 20px;
+          }
+        }
+    }
+
+  } // fin box formulario
+
+  section.banner-bruno{
+margin-bottom: 30px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

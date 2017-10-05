@@ -7,18 +7,17 @@ body{
 .box_codigo{
     max-width:910px;
     position: relative;
-    background: url(../img/huincha_codigo_lg.png) no-repeat;
-    height: 150px;
+   // background: url(../img/huincha_codigo_lg.png) no-repeat;
     margin-bottom: 10px;
-    padding: 20px;
- 
+    //padding: 20px;
+
    #img_code {
       position: absolute;
       right:-46px;
       top: -17px;
       width: 194px;
       height: 175px;
-   
+
    }
     form#form_codigo {
       h3{
@@ -27,7 +26,7 @@ body{
         float: left;
         margin: 0;
         padding: 0;
-       
+
       }
       .caja_arriba {
         width: 720px;
@@ -45,7 +44,7 @@ body{
                   text-align: center;
                 }
               }
-            @media (max-width:768px){ 
+            @media (max-width:768px){
                float: left;
 
             }
@@ -56,7 +55,7 @@ body{
          @media (max-width:768px){
             width: 100%;
          }
-  
+
         h3{
           font-size: 40px;
            float: left;
@@ -78,10 +77,10 @@ body{
               float: left;
               min-height: 14px;
             }
-        
-         
+
+
           }
-          
+
           // @media(max-width:768px){
           //     .input_codigo{
           //       float: left;
@@ -94,7 +93,7 @@ body{
           //             text-align: center;
           //           }
           //         }
-             
+
           //     }
           // }
 
@@ -127,7 +126,7 @@ body{
                   text-align: center;
                 }
               }
-         
+
           }
       }
           .checkbox{
@@ -140,7 +139,7 @@ body{
               margin: 5px 0;
             }
           }
-          
+
         .btn_amarillo{
           @extend %btn_amarillo;
                  margin: 30px auto;
@@ -180,6 +179,6 @@ body{
           letter-spacing: 4px;
         }
       }
-      
+
 
 } // box_ganador
