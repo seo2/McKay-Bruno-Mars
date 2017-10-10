@@ -9,15 +9,7 @@
 							<img src="assets/img/mobile_header.png" alt="" class="img-responsive center-block visible-xs">
 						</div>
 					</div>
-					<div class="row">
-						<div class="col-xs-10 col-xs-offset-1">
-							<div class="row">
-								<div class="col-xs-8 col-xs-offset-2 visible-xs">
-									<img src="assets/img/mobile_llamado.png" alt="" class="img-responsive center-block visible-xs">
-								</div>
-							</div>
-						</div>
-					</div>
+
 			</div>
 		</section>
 	<div class="container-fluid nopad">
@@ -34,7 +26,7 @@
 						      }
 						      ?>
 						      <?php
-						          //include('include-form-codigo-mobile.php');
+						         // include('include-form-codigo-mobile.php');
 						          include('include-form-codigo-desk.php');
 						       ?>
 						  </div>
@@ -57,11 +49,7 @@
 				<img class="img-responsive center-block hidden-xs" src="assets/img/banner-bruno.png" alt="">
 				<img class="img-responsive center-block visible-xs" src="assets/img/banner-bruno-xs.png" alt="">
 		</section>
-
 	</div>
-
-
-
 		<section class="box-ingreso-datos">
 			<div class="container">
 					<div class="row">

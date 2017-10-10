@@ -1,27 +1,27 @@
 <?php include('header.php') ?>
-<body>
+<body class="bg-blanco">
   <div class="container">
-<!--   <h3 class="visible-xs">PREGUNTAS FRECUENTES</h3> -->
     <div class="row">
-        <section class="ganadores">
-			<div class="content_ganadores">
-				<div class="col-sm-10 col-sm-offset-1">
+      <section class="ganadores">
+			 <div class="content_ganadores clearfix">
+				<div class="col-sm-12">
 					<div class="row">
-						<div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0">
+						<!-- <div class="col-xs-6 col-xs-offset-3 col-sm-4 col-sm-offset-0">
 							<img class="img-responsive" src="assets/img/logo125.png" alt="">
-						</div>
-						<div class="col-sm-8">
+						</div> -->
+						<div class="col-sm-12">
 							<div class="row text-center">
 								<h3>GANADORES</h3>
 								<h4>REVISA AQUÍ LOS GANADORES*</h4>
+									<div class="linea-amarilla"></div>
 							</div>
 							<div class="row">
-								<div class="col-sm-10 col-sm-offset-1" id="caja_ganadores">
+								<div class="col-sm-12" id="caja_ganadores">
 									<div class="row head_caja">
-										<div class="col-xs-8 text-center">
+										<div class="col-xs-8 text-center texto-gris">
 											NOMBRE
 										</div>
-										<div class="col-xs-4 text-center">
+										<div class="col-xs-4 text-center texto-rojo">
 											RUT
 										</div>
 									</div>
@@ -45,12 +45,12 @@
 											<?php echo $mk125_Rut; ?>
 											</p>
 										</div>
-									</div> 
-								<?php  
+									</div>
+								<?php
 										}
-									}                           
+									}
 								?>
-									
+
 									<div class="row" id="footer_caja">
 										<div class="col-sm-12 text-center">
 											<p>*Los GANADORES están sujetos a verificación.</p>
@@ -65,5 +65,6 @@
         </section>
     </div><!-- row -->
   </div> <!-- container -->
+  <div class="clearfix"></div>
 <?php include('footer.php') ?>
 

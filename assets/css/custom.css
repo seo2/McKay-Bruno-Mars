@@ -2,14 +2,20 @@
 .container { position: relative; }
 .container h3 { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px; color: #fff3df; text-transform: uppercase; }
 
+.texto-gris { color: #2e2d2d; }
+
+.texto-rojo { color: #e31e26; }
+
+.linea-amarilla { max-width: 580px; height: 2px; border-top: 1px solid #fbe33b; margin: 0 auto; margin-top: 22px; }
+
 .col-sm-6 { position: relative; }
 
 .min-height { min-height: 470px; }
 @media (max-width: 768px) { .min-height { min-height: 370px; } }
 
-.box_codigo form#form_codigo .caja_abajo .btn_amarillo, .box_codigo_xs form#form_codigo_xs .btn_amarillo, section.ingreso_datos .btn_amarillo, section.contacto .content_contacto form#main_contact .btn_amarillo { background-color: #fbe33b; border: none; font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: #090909; text-transform: uppercase; }
+.box_codigo form#form_codigo .caja_abajo .btn_amarillo, .box_codigo_xs form#form_codigo_xs .btn_amarillo, section.ingreso_datos .btn_amarillo, section.contacto .content_contacto form#main_contact .btn_amarillo { background-color: #f8b031; border: none; font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: #090909; text-transform: uppercase; }
 
-.texto_amarillo { color: #fbe33b; }
+.texto_amarillo { color: #f8b031; }
 
 .navbar-toggle { z-index: 1000; }
 
@@ -45,21 +51,21 @@ body { background: url(../img/bg_lg.jpg) no-repeat; background-size: cover; back
 @media (max-width: 768px) { .box_codigo form#form_codigo .caja_abajo h3 { font-size: 30px; } }
 .box_codigo form#form_codigo .caja_abajo .btn_amarillo { font-size: 20px; margin-left: 6px; }
 .box_codigo form#form_codigo .caja_abajo .checkbox { text-align: center; }
-.box_codigo form#form_codigo .caja_abajo .checkbox label { font-size: 9px; color: #fbe33b; float: left; min-height: 14px; }
+.box_codigo form#form_codigo .caja_abajo .checkbox label { font-size: 9px; color: #f8b031; float: left; min-height: 14px; }
 .box_codigo #img_huincha_texto { position: absolute; left: 0; bottom: -35px; }
 
 @media (max-width: 768px) { .box_codigo_xs form#form_codigo_xs .input_codigo { margin-top: 0; background-color: #ebebeb; padding: 7px; border-radius: 4px; } }
 @media (max-width: 768px) and (max-width: 767px) { .box_codigo_xs form#form_codigo_xs .input_codigo { padding: 20px 0 5px 0; } }
 @media (max-width: 768px) { .box_codigo_xs form#form_codigo_xs .input_codigo .form-group .form-control { text-align: center; } }
 .box_codigo_xs form#form_codigo_xs .checkbox { text-align: left; }
-.box_codigo_xs form#form_codigo_xs .checkbox label { font-size: 14px; color: #fbe33b; float: left; min-height: 14px; margin: 5px 0; }
+.box_codigo_xs form#form_codigo_xs .checkbox label { font-size: 14px; color: #f8b031; float: left; min-height: 14px; margin: 5px 0; }
 .box_codigo_xs form#form_codigo_xs .btn_amarillo { margin: 30px auto; }
 @media (max-width: 768px) { .box_codigo_xs form#form_codigo_xs .btn_amarillo { width: 100%; font-size: 30px; } }
 
 .box_ganador { max-width: 50%; border-radius: 20px; min-height: 270px; background-color: #860000; margin-top: 60px; position: relative; text-align: center; -webkit-box-shadow: 2px 2px 16px 7px rgba(0, 0, 0, 0.25); box-shadow: 2px 2px 16px 7px rgba(0, 0, 0, 0.25); }
 @media (max-width: 768px) { .box_ganador { max-width: 90%; } }
 .box_ganador .text { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); width: 90%; }
-.box_ganador .text h3 { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: #fbe33b; text-transform: uppercase; }
+.box_ganador .text h3 { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: #f8b031; text-transform: uppercase; }
 .box_ganador .text h4 { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 50px; color: white; text-transform: uppercase; letter-spacing: 4px; }
 
 section.ingreso_datos { min-height: 300px; margin-top: 30px; background: url(../img/bg_form_datos.jpg) no-repeat; background-size: cover; background-position: center; padding: 20px 0; }
@@ -90,7 +96,7 @@ section.ingreso_datos .box_slider .slider_categoria .owl-nav.disabled { display:
 section.ingreso_datos .box_slider .slider_categoria .owl-dots { position: absolute; position: absolute; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); }
 section.ingreso_datos .box_slider .slider_categoria .owl-dots .owl-dot span { border: 3px solid white; background: transparent; border-radius: 50px; height: 15px; width: 15px; cursor: pointer; }
 @media (max-width: 767px) { section.ingreso_datos .box_slider .slider_categoria .owl-dots .owl-dot span { margin-left: 5px; margin-right: 5px; } }
-section.ingreso_datos .box_slider .slider_categoria .owl-dots .owl-dot.active span { background-color: #fbe33b; }
+section.ingreso_datos .box_slider .slider_categoria .owl-dots .owl-dot.active span { background-color: #f8b031; }
 section.ingreso_datos .box_slider .slider_categoria .owl-next, section.ingreso_datos .box_slider .slider_categoria .owl-prev { width: 45px; height: 42px; position: absolute; text-indent: -9999px; top: 50%; margin-top: -21px; cursor: pointer; }
 section.ingreso_datos .box_slider .slider_categoria .owl-next:hover, section.ingreso_datos .box_slider .slider_categoria .owl-prev:hover { background-color: transparent; opacity: 0.5; }
 section.ingreso_datos .box_slider .slider_categoria .owl-next { background: url(../img/next.png) no-repeat !important; right: 30px; }
@@ -107,9 +113,9 @@ section.ingreso_datos .box_slider .slider_categoria .owl-prev { background: url(
 #modal_mensaje .modal-content .modal-body .mensaje, #modal_instawin .modal-content .modal-body .mensaje { margin-bottom: 30px; }
 #modal_mensaje .modal-content .modal-body .mensaje p, #modal_instawin .modal-content .modal-body .mensaje p { margin: 0; padding: 0; }
 #modal_mensaje .modal-content .modal-body .mensaje .texto_blanco, #modal_instawin .modal-content .modal-body .mensaje .texto_blanco { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 25px; color: white; text-transform: uppercase; }
-#modal_mensaje .modal-content .modal-body .mensaje .texto_amarillo_large, #modal_instawin .modal-content .modal-body .mensaje .texto_amarillo_large { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 60px; color: #fbe33b; text-transform: uppercase; line-height: 60px; }
+#modal_mensaje .modal-content .modal-body .mensaje .texto_amarillo_large, #modal_instawin .modal-content .modal-body .mensaje .texto_amarillo_large { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 60px; color: #f8b031; text-transform: uppercase; line-height: 60px; }
 #modal_mensaje .modal-content .modal-body .mensaje .small, #modal_instawin .modal-content .modal-body .mensaje .small { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 13px; color: white; text-transform: uppercase; }
-#modal_mensaje .modal-content .modal-body .mensaje .texto_amarillo_small, #modal_instawin .modal-content .modal-body .mensaje .texto_amarillo_small { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 40px; color: #fbe33b; text-transform: uppercase; line-height: 38px; }
+#modal_mensaje .modal-content .modal-body .mensaje .texto_amarillo_small, #modal_instawin .modal-content .modal-body .mensaje .texto_amarillo_small { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 40px; color: #f8b031; text-transform: uppercase; line-height: 38px; }
 #modal_mensaje .modal-content .modal-footer, #modal_instawin .modal-content .modal-footer { text-align: center; background-color: #be0002; font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 25px; color: white; text-transform: uppercase; border-top: none; }
 
 #modal_instawin .modal-content .modal-body { padding-bottom: 30px; background: url(../img/bg_modal_instawin.jpg) no-repeat; }
@@ -123,14 +129,14 @@ section.ingreso_datos .box_slider .slider_categoria .owl-prev { background: url(
 #modal_instawin .modal-content .modal-footer { font-size: 20px; }
 
 section.que_gano { margin-top: 50px; }
-section.que_gano .content_que_gano { background: url(../img/bg_que_gano_lg.jpg) no-repeat; background-size: cover; background-position: center; min-height: 500px; width: 100%; position: relative; }
+section.que_gano .content_que_gano { background: url(../img/bg_que_gano_lg.png) no-repeat; background-size: cover; background-position: center; min-height: 530px; width: 100%; position: relative; }
 @media (max-width: 768px) { section.que_gano .content_que_gano { padding: 20px 20px 50px 20px; } }
 section.que_gano .content_que_gano img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 54%; top: 43%; }
 section.que_gano .content_que_gano .text_que_gano { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
 section.que_gano .content_que_gano .text_que_gano .nota p { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; color: white; line-height: 16px; margin-top: 20px; text-transform: uppercase; }
 section.que_gano .content_que_gano .text_que_gano .texto_blanco_bold { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 25px; color: white; text-transform: uppercase; line-height: 24px; }
 section.que_gano .content_que_gano .text_que_gano .texto_blanco_black { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 60px; color: white; text-transform: uppercase; line-height: 55px; }
-section.que_gano .content_que_gano .text_que_gano .texto_amarillo_black { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 50px; color: #fbe33b; text-transform: uppercase; line-height: 55px; }
+section.que_gano .content_que_gano .text_que_gano .texto_amarillo_black { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 50px; color: #f8b031; text-transform: uppercase; line-height: 55px; }
 @media (max-width: 768px) { section.que_gano .content_que_gano .text_que_gano .texto_amarillo_black { font-size: 38px; line-height: 42px; } }
 section.que_gano .content_que_gano .text_que_gano .text_blanco_med { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 23px; color: white; text-transform: uppercase; line-height: 16px; }
 section.que_gano .huincha_texto { position: absolute; background: url(../img/huincha_texto.png) no-repeat; background-size: cover; background-position: center; width: 820px; height: 27px; bottom: 26px; display: block; }
@@ -146,7 +152,7 @@ section.como_gano .content_como_gano .heading_como_gano p { font-family: 'nexa_b
 @media (min-width: 768px) { section.como_gano .content_como_gano .borde { height: 150px; width: 2px; border-right: 1px solid #ff726d; position: absolute; right: 0; top: 0; } }
 section.como_gano .content_como_gano .box_numero { min-height: 150px; position: relative; }
 section.como_gano .content_como_gano .box_numero img { margin: 0 auto; }
-section.como_gano .content_como_gano .box_numero .num_circle { border-radius: 50%; width: 36px; height: 36px; padding: 4px; background: #fbe33b; text-align: center; font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px; color: black; font-style: italic; display: inline-block; float: left; margin-right: 20px; }
+section.como_gano .content_como_gano .box_numero .num_circle { border-radius: 50%; width: 36px; height: 36px; padding: 4px; background: #f8b031; text-align: center; font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px; color: black; font-style: italic; display: inline-block; float: left; margin-right: 20px; }
 @media (max-width: 768px) { section.como_gano .content_como_gano .box_numero .num_circle { float: none; margin: 0 auto; display: block; margin-bottom: 20px; } }
 section.como_gano .content_como_gano .box_numero p { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; color: white; line-height: 22px; }
 @media (max-width: 768px) { section.como_gano .content_como_gano .box_numero p { font-size: 20px; text-align: center; } }
@@ -194,11 +200,11 @@ footer .logo_footer { position: absolute; left: 0; background: url(../img/logo_f
 @media (max-width: 767px) { footer .logo_footer { background: url(../img/logo_footer_xs.png) no-repeat; width: 127px; height: 80px; top: -20px; left: 10px; } }
 footer ul#nav_footer { margin: 0; margin-top: 30px; padding: 0; list-style-type: none; }
 @media (max-width: 767px) { footer ul#nav_footer { margin-right: 15px; } }
-footer ul#nav_footer li { display: inline-block; border-right: 2px solid #fbe33b; padding-left: 10px; padding-right: 10px; }
+footer ul#nav_footer li { display: inline-block; border-right: 2px solid #f8b031; padding-left: 10px; padding-right: 10px; }
 footer ul#nav_footer li:first-child { padding-left: 0; }
 footer ul#nav_footer li:last-child { padding-right: 0; border-right: none; }
 @media (max-width: 767px) { footer ul#nav_footer li { display: block; text-align: right; margin: 10px 0; }
-  footer ul#nav_footer li:last-child { padding-right: 10px; border-right: 2px solid #fbe33b; } }
+  footer ul#nav_footer li:last-child { padding-right: 10px; border-right: 2px solid #f8b031; } }
 footer ul#nav_footer li a { display: inline-block; font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 300; font-size: 16px; color: white; text-transform: uppercase; }
 footer ul#nav_footer li a:hover { text-decoration: underline; }
 
@@ -810,6 +816,39 @@ footer { position: relative; min-height: 120px; }
 .container section#ganadores #contenido-ganadores p { font-family: 'nexa_book', arial, helvetica, sans-serif; color: white; font-size: 32px; line-height: 35px; text-transform: uppercase; margin-bottom: 50px; }
 
 @media (max-width: 550px) { .container section#ganadores #contenido-ganadores p { font-size: 22px; line-height: 28px; margin-bottom: 25px; text-align: left; -ms-text-align-last: auto; text-align-last: auto; } }
+footer { width: 100%; height: 175px; background-image: url(../img/bg-footer.png); background-repeat: no-repeat; background-size: cover; background-position: center; }
+footer .logo_footer { width: 106px; height: 80px; }
+
+body.bg-blanco { background: #fff; }
+
+section.ganadores { margin-top: 60px; width: 100%; }
+section.ganadores .content_ganadores { width: 100%; height: 100vh; background-image: url(../img/bg-ganadores.jpg); background-repeat: no-repeat; background-size: cover; background-position: top center; }
+section.ganadores .content_ganadores h3 { color: #fbe33b; font-size: 40px; }
+section.ganadores .content_ganadores h4 { font-size: 30px; line-height: 30px; }
+section.ganadores .content_ganadores #caja_ganadores { background: none; width: 100%; }
+@media (min-width: 769px) { section.ganadores .content_ganadores #caja_ganadores { width: 70%; margin-left: 15%; margin-right: 15%; } }
+section.ganadores .content_ganadores #caja_ganadores .head_caja { background: #fbe33b; margin-bottom: 30px !important; }
+section.ganadores .content_ganadores #caja_ganadores .content_caja .caja_nom { color: #525252; }
+section.ganadores .content_ganadores #caja_ganadores .content_caja .caja_rut { color: #8b0000; }
+section.ganadores .content_ganadores #caja_ganadores .content_caja p { background-color: white; font-size: 14px; }
+
+section.productos { margin: 50px 0; width: 100%; background-image: url(../img/bg-ganadores.jpg); background-repeat: no-repeat; background-size: cover; background-position: top center; }
+section.productos .content_productos .slider_productos { margin-top: 150px; }
+section.productos .content_productos .heading_productos h3 { font-size: 45px; line-height: 43px; margin-bottom: 30px; }
+
+section.que_gano { margin-top: 50px; }
+section.que_gano .content_que_gano { background: url(../img/bg_que_gano_lg.png) no-repeat; background-size: cover; background-position: center; min-height: 530px; width: 100%; position: relative; }
+@media (max-width: 768px) { section.que_gano .content_que_gano { padding: 20px 20px 50px 20px; } }
+section.que_gano .content_que_gano img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 54%; top: 43%; }
+section.que_gano .content_que_gano .text_que_gano { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
+section.que_gano .content_que_gano .text_que_gano .nota p { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; color: white; line-height: 16px; margin-top: 20px; text-transform: uppercase; }
+section.que_gano .content_que_gano .text_que_gano .texto_blanco_bold { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 25px; color: white; text-transform: uppercase; line-height: 24px; }
+section.que_gano .content_que_gano .text_que_gano .texto_blanco_black { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 60px; color: white; text-transform: uppercase; line-height: 55px; }
+section.que_gano .content_que_gano .text_que_gano .texto_amarillo_black { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 50px; color: #f8b031; text-transform: uppercase; line-height: 55px; }
+@media (max-width: 768px) { section.que_gano .content_que_gano .text_que_gano .texto_amarillo_black { font-size: 38px; line-height: 42px; } }
+section.que_gano .content_que_gano .text_que_gano .text_blanco_med { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 23px; color: white; text-transform: uppercase; line-height: 16px; }
+section.que_gano .huincha_texto { position: absolute; background: url(../img/huincha_texto.png) no-repeat; background-size: cover; background-position: center; width: 820px; height: 27px; bottom: 26px; display: block; }
+
 body#home { background: url(../img/bg-home.png) no-repeat; background-position: center top; background-color: #E31E26; }
 
 section.box-formulario-codigo { min-height: 200px; background-color: #534846; margin: 50px 0; padding: 30px 0; }

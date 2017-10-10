@@ -1,25 +1,17 @@
 <?php include('header.php') ?>
-<body>
+<body class="bg-blanco">
   <div class="container">
     <div class="row">
         <section class="productos ">
 
           <div class="content_productos clearfix">
             <div class="heading_productos">
-              <h3>¿QUÉ PRODUCTOS PARTICIPAN?<br><br></h3>
+              <h3>¿QUÉ PRODUCTOS <span class="texto-amarillo">PARTICIPAN?</span></h3>
             </div>
             <div class="heading_productos">
-            	<h4><span>Todas</span> las galletas M<span class="text-lowercase" style="color:#fff;">c</span>Kay<span class="registrado">®</span><br>participan en esta promoción</h4>
+            	<h4>Todas las galletas M<span class="text-lowercase" style="color:#fff;">c</span>Kay<span class="registrado">®</span><br>participan en esta promoción</h4>
             </div>
-            <div class="row">
-				<div class="col-xs-6 col-xs-offset-3 col-md-4 col-md-offset-4">
-					<div class="row">
-						<div class="col-md-8 col-md-offset-2">
-							<img class="img-responsive" src="assets/img/logo125.png" alt="">
-						</div>
-					</div>
-				</div>
-            </div>
+            <div class="linea-amarilla"></div>
             <div class="row">
             	<div class="col-md-8 col-md-offset-2">
 

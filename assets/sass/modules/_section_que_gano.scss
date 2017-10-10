@@ -1,17 +1,17 @@
 section.que_gano{
   margin-top: 50px;
-  
+
     .content_que_gano{
-      background: url(../img/bg_que_gano_lg.jpg) no-repeat;
+      background: url(../img/bg_que_gano_lg.png) no-repeat;
       background-size: cover;
       background-position: center;
-      min-height: 500px;
+      min-height: 530px;
       width: 100%;
       position: relative;
           @media(max-width: 768px){
        padding: 20px 20px 50px 20px;
       }
-    
+
             img{
               @include centerer(true, true);
               left: 54%;
@@ -27,7 +27,7 @@ section.que_gano{
                       margin-top: 20px;
                       text-transform: uppercase;
                     }
-                   
+
                   }
                 .texto_blanco_bold{
                         @include black(25px, white);
@@ -64,9 +64,9 @@ section.que_gano{
                     //     line-height: 30px;
                     // }
               }
-        
-       
-      
+
+
+
         }
 
     } //content que gano
