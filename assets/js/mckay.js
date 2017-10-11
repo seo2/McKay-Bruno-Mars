@@ -406,21 +406,15 @@ function barra(){
 }
 setTimeout(barra, 1000);
 
-<<<<<<< HEAD
-=======
-
 // var container_width = 25 * $(".container-inner ul li").length;
 //    $(".container-inner").css("width", container_width);
 
->>>>>>> 1ea9e2e22109a615880e916e21fab4102b5fa7fa
 var rng = document.getElementById("range");
 
 rng.oninput = function () {
     this.parentNode.scrollLeft = this.value - 400;
 }
 
-
-<<<<<<< HEAD
 $('input[type=range]').val('0');
 $('input[type=range]').on('change input', function() {
   var max 			= 100;
@@ -437,11 +431,4 @@ $('input[type=range]').on('change input', function() {
     
     
 })
-=======
-
-
-
-
-
->>>>>>> 1ea9e2e22109a615880e916e21fab4102b5fa7fa
 
