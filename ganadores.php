@@ -12,7 +12,7 @@
 						<div class="col-sm-12">
 							<div class="row text-center">
 								<h3>GANADORES</h3>
-								<h4>REVISA AQUÍ LOS GANADORES*</h4>
+								<h4>REVISA AQUÍ LOS GANADORES</h4>
 									<div class="linea-amarilla"></div>
 							</div>
 							<div class="row">
