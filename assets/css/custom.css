@@ -2,6 +2,11 @@
 .container { position: relative; }
 .container h3 { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px; color: #fff3df; text-transform: uppercase; }
 
+.divisor { width: 100%; height: 2px; border-top: 1px solid #FBB032; margin: 0 0 50px 0; padding: 0; }
+
+.margin-top { margin-top: 50px !important; }
+@media (max-width: 768px) { .margin-top { margin-top: 0 !important; } }
+
 .texto-gris { color: #2e2d2d; }
 
 .texto-rojo { color: #e31e26; }
@@ -816,10 +821,11 @@ footer { position: relative; min-height: 120px; }
 .container section#ganadores #contenido-ganadores p { font-family: 'nexa_book', arial, helvetica, sans-serif; color: white; font-size: 32px; line-height: 35px; text-transform: uppercase; margin-bottom: 50px; }
 
 @media (max-width: 550px) { .container section#ganadores #contenido-ganadores p { font-size: 22px; line-height: 28px; margin-bottom: 25px; text-align: left; -ms-text-align-last: auto; text-align-last: auto; } }
-footer { width: 100%; height: 175px; background-image: url(../img/bg-footer.png); background-repeat: no-repeat; background-size: cover; background-position: center; }
+footer { width: 100%; height: 170px; background-image: url(../img/bg-footer.png); background-repeat: no-repeat; background-size: cover; background-position: center; }
 footer .logo_footer { width: 106px; height: 80px; }
 
 body.bg-blanco { background: #fff; }
+@media (max-width: 768px) { body.bg-blanco { background: #E31E26; } }
 
 section.ganadores { margin-top: 60px; width: 100%; }
 section.ganadores .content_ganadores { width: 100%; height: 100vh; background-image: url(../img/bg-ganadores.jpg); background-repeat: no-repeat; background-size: cover; background-position: top center; }
@@ -827,7 +833,7 @@ section.ganadores .content_ganadores h3 { color: #fbe33b; font-size: 40px; }
 section.ganadores .content_ganadores h4 { font-size: 30px; line-height: 30px; }
 section.ganadores .content_ganadores #caja_ganadores { background: none; width: 100%; }
 @media (min-width: 769px) { section.ganadores .content_ganadores #caja_ganadores { width: 70%; margin-left: 15%; margin-right: 15%; } }
-section.ganadores .content_ganadores #caja_ganadores .head_caja { background: #fbe33b; margin-bottom: 30px !important; }
+section.ganadores .content_ganadores #caja_ganadores .head_caja { background: #FBB032; margin-bottom: 30px !important; }
 section.ganadores .content_ganadores #caja_ganadores .content_caja .caja_nom { color: #525252; }
 section.ganadores .content_ganadores #caja_ganadores .content_caja .caja_rut { color: #8b0000; }
 section.ganadores .content_ganadores #caja_ganadores .content_caja p { background-color: white; font-size: 14px; }
@@ -836,9 +842,9 @@ section.productos { margin: 50px 0; width: 100%; background-image: url(../img/bg
 section.productos .content_productos .slider_productos { margin-top: 150px; }
 section.productos .content_productos .heading_productos h3 { font-size: 45px; line-height: 43px; margin-bottom: 30px; }
 
-section.que_gano { margin-top: 50px; }
+section.que_gano { margin: 110px; }
+@media (max-width: 768px) { section.que_gano { margin: 0; } }
 section.que_gano .content_que_gano { background: url(../img/bg_que_gano_lg.png) no-repeat; background-size: cover; background-position: center; min-height: 530px; width: 100%; position: relative; }
-@media (max-width: 768px) { section.que_gano .content_que_gano { padding: 20px 20px 50px 20px; } }
 section.que_gano .content_que_gano img { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); left: 54%; top: 43%; }
 section.que_gano .content_que_gano .text_que_gano { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
 section.que_gano .content_que_gano .text_que_gano .nota p { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 16px; color: white; line-height: 16px; margin-top: 20px; text-transform: uppercase; }
@@ -851,7 +857,7 @@ section.que_gano .huincha_texto { position: absolute; background: url(../img/hui
 
 body#home { background: url(../img/bg-home.png) no-repeat; background-position: center top; background-color: #E31E26; }
 
-section.box-formulario-codigo { min-height: 200px; background-color: #534846; margin: 50px 0; padding: 30px 0; }
+section.box-formulario-codigo { min-height: 200px; background-color: #534846; margin: 50px 0 0 0; padding: 30px 0; }
 section.box-formulario-codigo .box_codigo { padding: 0; height: 200px; margin-bottom: 0; background: none; }
 section.box-formulario-codigo .box_codigo #form_codigo { height: 100%; }
 section.box-formulario-codigo .box_codigo #form_codigo .input_codigo { margin-top: 30px; margin-bottom: 0; position: relative; }
@@ -862,6 +868,60 @@ section.box-formulario-codigo .box_codigo #form_codigo .nota { font-family: 'nex
 section.box-formulario-codigo .box_codigo #form_codigo .checkbox { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 12px; color: white; text-transform: uppercase; }
 section.box-formulario-codigo .box_codigo #form_codigo .nota, section.box-formulario-codigo .box_codigo #form_codigo .checkbox { margin-top: 20px; }
 
-section.banner-bruno { margin-bottom: 30px; }
+#navbar ul#main_nav li a.btnnuevomenu { color: #FBB032; }
 
-section.box-fila { min-height: 240px; }
+#header2, #header2 .navbar-default { background-color: #FBB032; }
+
+#header1 { border-top-color: #FBB032; }
+
+@media (max-width: 768px) { .navbar-default { border-bottom: 1px solid #FBB032; background: #FBB032; } }
+.navbar-nav { float: right; }
+@media (max-width: 768px) { .navbar-nav { float: none; margin-top: 50px; } }
+
+section.como_gano { margin: 50px; padding-top: 50px; padding-bottom: 30px !important; position: relative; background-image: url(../img/bg-ganadores.jpg); background-repeat: no-repeat; background-size: cover; background-position: top center; }
+section.como_gano .logo-pie-como-gano { width: 159px; height: 167px; position: absolute; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); background-image: url(../img/logo-pie-como-gano.png); background-repeat: no-repeat; background-size: cover; background-position: top center; top: -110px; }
+@media (max-width: 768px) { section.como_gano { margin: 0; } }
+@media (max-width: 768px) { section.como_gano { background-image: url(../img/bg-bruno-xs.jpg); background-position: center; } }
+section.como_gano h3 { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 24px; color: #fff3df; text-transform: uppercase; margin-left: 15px; }
+section.como_gano .content_como_gano { background: none; background-size: cover; background-position: center top; margin-bottom: auto; position: relative; padding: 0; }
+@media (max-width: 768px) { section.como_gano .content_como_gano { padding: 0px; margin-bottom: 0; } }
+section.como_gano .content_como_gano .heading_como_gano h3 { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: red; text-transform: uppercase; line-height: 35px; max-width: 644px; text-align: center; margin: 0 auto; font-size: 30px !important; }
+@media (max-width: 768px) { section.como_gano .content_como_gano .heading_como_gano h3 { font-size: 25px; line-height: 32px; } }
+section.como_gano .content_como_gano .heading_como_gano p { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 24px; color: white; text-transform: uppercase; line-height: 16px; text-align: center; margin: 20px 0 30px 0; letter-spacing: 4px; }
+@media (max-width: 768px) { section.como_gano .content_como_gano .heading_como_gano p { font-size: 25px; line-height: 26px; } }
+@media (min-width: 768px) { section.como_gano .content_como_gano .borde { height: 150px; width: 2px; border-right: 1px solid #ff726d; position: absolute; right: 0; top: 0; } }
+section.como_gano .content_como_gano .box_numero { min-height: 150px; position: relative; margin-bottom: 50px; }
+section.como_gano .content_como_gano .box_numero img { margin: 0 auto; }
+section.como_gano .content_como_gano .box_numero .num_circle { border-radius: 50%; width: 36px; height: 36px; padding: 4px; background: #FBB032; text-align: center; font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: white; font-style: italic; display: inline-block; float: left; margin-right: 20px; font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: white; width: 40px; height: 40px; padding: 0 4px 0 0; float: none; margin-right: 0; margin-bottom: 10px; }
+@media (max-width: 768px) { section.como_gano .content_como_gano .box_numero .num_circle { float: none; margin: 0 auto; display: block; margin-bottom: 20px; } }
+section.como_gano .content_como_gano .box_numero p { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 18px; color: white; line-height: 22px; text-transform: uppercase; margin-bottom: 50px; }
+@media (max-width: 768px) { section.como_gano .content_como_gano .box_numero p { font-size: 20px; text-align: center; } }
+section.como_gano .box_pie_como_gano { max-width: 650px; border: 2px dotted #FBB032; padding: 12px; background-color: transparent; border-radius: 5px; position: relative; margin-top: 50px; }
+@media (max-width: 768px) { section.como_gano .box_pie_como_gano { padding: 10px; max-width: 90%; } }
+section.como_gano .box_pie_como_gano p { width: auto; }
+section.como_gano .box_pie_como_gano .title { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 18px; color: black; text-transform: uppercase; margin: 0; }
+section.como_gano .box_pie_como_gano .text { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 17px; color: black; text-transform: uppercase; margin: 0; }
+section.como_gano .box-texto-como-gano { text-align: center; background-color: #FBB032; padding: 50px 30px 30px 30px; border-radius: 4px; }
+
+section.como_gano .heading_como_gano h3 { font-family: 'nexa_black', Helvetica, Arial, sans-serif; font-size: 30px; color: white; text-transform: uppercase; line-height: 35px; max-width: 644px; text-align: center; margin: 0 auto; font-size: 30px !important; color: white; line-height: normal; }
+@media (max-width: 768px) { section.como_gano .heading_como_gano h3 { font-size: 25px !important; line-height: 32px !important; color: white !important; } }
+section.como_gano .heading_como_gano p { font-family: 'nexa_book', Helvetica, Arial, sans-serif; font-size: 24px; color: white; text-transform: uppercase; line-height: 16px; line-height: normal; text-align: center; margin: 0; letter-spacing: 1px; }
+@media (max-width: 768px) { section.como_gano .heading_como_gano p { font-size: 22px !important; line-height: 24px !important; } }
+
+section.box-fila { min-height: 240px; position: relative; margin-top: 30px; }
+@media (max-width: 768px) { section.box-fila form#busca-nombre { float: right; } }
+section.box-fila form#busca-nombre .form-control { width: 380px; height: 71px; text-transform: none; font-size: 23px; text-align: left; }
+section.box-fila form#busca-nombre .bt-buscar { border-radius: 50%; width: 70px; height: 70px; margin-left: 20px; background-color: #FBB032; border: none; }
+section.box-fila form#busca-nombre .bt-buscar .fa-search { color: white; font-size: 40px; }
+section.box-fila .estadio, section.box-fila .estadio-xs { width: 281px; height: 207px; position: absolute; right: 0; top: 0; background-image: url(../img/estadio.png); background-repeat: no-repeat; background-size: cover; background-position: center; }
+section.box-fila .estadio-xs { width: 128px; height: 96px; left: 0; top: 0; }
+section.box-fila .box-personas { width: 600px; }
+section.box-fila .box-personas .container-outer { overflow: scroll; width: 600px; height: 80px; overflow-y: hidden; margin-top: 40px; height: 100px; }
+section.box-fila .box-personas .container-inner { width: 6000px; margin-bottom: 9px; }
+section.box-fila .box-personas ul { margin: 0; padding: 0; list-style-type: none; }
+section.box-fila .box-personas ul li { margin: 0 10px; display: inline-block; }
+section.box-fila .box-personas ul li a { display: inline-block; cursor: pointer; }
+section.box-fila .box-personas ul li:first-child { margin-left: 0; }
+section.box-fila .box-personas ul li:last-child { margin-right: 0; }
+
+#range { width: 100%; }

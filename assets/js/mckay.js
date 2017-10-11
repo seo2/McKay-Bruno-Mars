@@ -11,7 +11,7 @@ mayor 	= localStorage.getItem("mayor");
 
 $('#nombre').val(nombre);
 $('#rut').val(rut);
-$('#email').val(mail);	
+$('#email').val(mail);
 $('#fecha').val(fecnac);
 $('#telefono').val(fono);
 $('#region').val(region);
@@ -49,7 +49,7 @@ $(function() {
 	            items:1
 	        }
 	    }
-	});	
+	});
 	$('.slider_productos').owlCarousel({
 	    loop:true,
 	    margin:10,
@@ -94,7 +94,7 @@ $('#form_codigo')
 				hora 	= $('#hora').val();
 				$('#codigo2').val(codigo);
 				$('#hora2').val(hora);
-				
+
 				$('.box_ganador').addClass('hide');
 				$('#ingreso_datos').removeClass('hide');
 				$('html, body').animate({  scrollTop: $("#ingreso_datos").offset().top }, 1000);
@@ -127,7 +127,7 @@ $('#form_codigo_xs')
 				hora 	= $('#hora').val();
 				$('#codigo2').val(codigo);
 				$('#hora2').val(hora);
-				
+
 				$('.box_ganador').addClass('hide');
 				$('#ingreso_datos').removeClass('hide');
 				$('html, body').animate({  scrollTop: $("#ingreso_datos").offset().top }, 1000);
@@ -151,7 +151,7 @@ $('#form_codigo_xs')
 		}
 	});
 
-	
+
 $('.item').on('click',function(){
 	sueno = '';
 	if(!$(this).hasClass('checked')){
@@ -162,8 +162,8 @@ $('.item').on('click',function(){
 		$('.item').removeClass('checked');
 	}
 	$('#sueno').val(sueno);
-});	
-	
+});
+
 $('#form_datos')
     .formValidation({
         framework: 'bootstrap',
@@ -193,17 +193,17 @@ $('#form_datos')
 		e.preventDefault();
 	    if($('input[name=mayor]:checked').val()==1){
 		    $("#form_datos button").html('<i class="fa fa fa-spinner fa-spin"></i>');
-		    
+
 		    mayor	= 1;
 			nombre	= $('#nombre').val();
 			rut		= $('#rut').val();
-			mail	= $('#email').val();	
+			mail	= $('#email').val();
 			fecnac	= $('#fecha').val();
 			fono	= $('#telefono').val();
 			region	= $('#region').val();
 			codigo2 = $('#codigo2').val();
 			hora2 	= $('#hora2').val();
-		    
+
 		    localStorage.setItem("mayor",mayor);
 		    localStorage.setItem("nombre",nombre);
 		    localStorage.setItem("rut",rut);
@@ -263,14 +263,14 @@ $('#form_datos')
 			    error: function(xhr, status, error) {
 					//alert(status);
 				}
-		    
-		    
 
-			}); 
+
+
+			});
 		}else{
 			alert('Debes ser mayor de edad para poder participar');
 		}
-		 
+
     })
     .find('[name="rut"]').mask('99999999-A');
 
@@ -296,7 +296,7 @@ $('#modal_instawin').on('hidden.bs.modal', function () {
 $('#modal_mensaje').on('hidden.bs.modal', function () {
 	$('#codigo2').val("");
 	$('#hora2').val("");
-	
+
 	$('.box_ganador').removeClass('hide');
 	$('#ingreso_datos').addClass('hide');
 	$('html, body').animate({  scrollTop: $("#franja_participa").offset().top }, 1000);
@@ -308,7 +308,7 @@ $('#modal_mensaje').on('hidden.bs.modal', function () {
 
 $('#preguntas-desk li').on('click', function(){
 	$('.content_faq li').removeClass('active');
-	$(this).addClass('active');	
+	$(this).addClass('active');
 	faq = $(this).data('id');
 	$('.answer_faq').addClass('hide');
 	$('#'+faq).removeClass('hide');
@@ -318,27 +318,27 @@ $('#preguntas-desk li').on('click', function(){
 
 $('#preguntas-mob li').on('click', function(){
 	$('.content_faq li').removeClass('active');
-	$(this).addClass('active');	
+	$(this).addClass('active');
 	faq = $(this).data('id');
 	$('.answer_faq').addClass('hide');
 	$('#'+faq).removeClass('hide');
-	
+
 	$('html, body').animate({
 	    scrollTop: $('#'+faq).offset().top
 	}, 1000);
-	
+
 });
 
 $('#btn-volver').on('click', function(){
-	
+
 	$('html, body').animate({
 	    scrollTop: $('#preguntas-mob').offset().top
 	}, 1000);
-	
+
 });
 
 
-	
+
 $('#main_contact')
     .formValidation({
         framework: 'bootstrap',
@@ -379,9 +379,9 @@ $('#main_contact')
 				//alert(status);
 			}
 		});
-		 
+
     });
-    
+
 $('#header1 .btnnuevomenu').on('click', function(){
 	$('#header2').removeClass('hide');
 });
@@ -402,7 +402,24 @@ $('#flechabaja2').on('click', function(){
 
 var porcentaje = $('#grafico-interior').data('porcentaje');
 function barra(){
-	$('#grafico-interior').css({'width': porcentaje+'%'});	
+	$('#grafico-interior').css({'width': porcentaje+'%'});
 }
 setTimeout(barra, 1000);
+
+
+// var container_width = 25 * $(".container-inner ul li").length;
+//    $(".container-inner").css("width", container_width);
+
+var rng = document.getElementById("range");
+
+rng.oninput = function () {
+    this.parentNode.scrollLeft = this.value - 400;
+}
+
+
+
+
+
+
+
 

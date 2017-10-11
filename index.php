@@ -36,9 +36,26 @@
 		</section>
 		<section class="box-fila">
 			<div class="container">
+				<form id="busca-nombre" class="form-inline">
+				  <div class="form-group">
+				   <!--  <label class="sr-only" for="name">Email address</label> -->
+				    <input type="email" class="form-control" id="name" placeholder="Ingresa tu nombre">
+				  </div>
+				  <div class="form-group">
+				  	<button type="submit" class="btn btn-default bt-buscar">
+				  		<i class="fa fa-search" aria-hidden="true"></i>
+				  	</button>
+				   <!--  <label class="sr-only" for="exampleInputPassword3">Password</label>
+				    <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password"> -->
+				  </div>
+				</form> <!-- busca nombre -->
 
-				seccion fila
-
+				<div class="hidden-xs hidden-sm">
+						<?php include('include-section-fila-desk.php') ?>
+				</div>
+				<div class="visible-xs visible-sm">
+						<?php include('include-section-fila-xs.php') ?>
+				</div>
 			</div>
 		</section> <!-- box fila -->
 
