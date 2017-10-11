@@ -406,3 +406,27 @@ function barra(){
 }
 setTimeout(barra, 1000);
 
+var rng = document.getElementById("range");
+
+rng.oninput = function () {
+    this.parentNode.scrollLeft = this.value - 400;
+}
+
+
+$('input[type=range]').val('0');
+$('input[type=range]').on('change input', function() {
+  var max 			= 100;
+  var value 		= $(this).val();
+  var percent 		= value / max;
+  var parent_height = $('section.box-fila .box-personas .container-outer').width();
+  var height 		= $('section.box-fila .box-personas .container-inner').width();
+  console.log("p:" + parent_height + " s:" + height + " %:" + percent);
+  var top = (parent_height - height) * percent;
+  //console.log("t", top, "h", parent_height - height);  
+  if(percent <= 1)
+    $('section.box-fila .box-personas .container-inner').css('left', top + "px");
+    
+    
+    
+})
+
