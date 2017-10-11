@@ -409,26 +409,26 @@ setTimeout(barra, 1000);
 // var container_width = 25 * $(".container-inner ul li").length;
 //    $(".container-inner").css("width", container_width);
 
-var rng = document.getElementById("range");
+var ancho = 200;
 
-rng.oninput = function () {
-    this.parentNode.scrollLeft = this.value - 400;
-}
+$('section.box-fila .box-personas ul li').each(function(i, obj) {
+   console.log($(this).width());
+   ancho = ancho + $(this).width() + 20;
+	console.log(ancho);
+});
+var ancho_caja = $('section.box-fila .box-personas .container-outer').width();
+ $('section.box-fila .box-personas .container-inner').width(ancho+'px');
+ $('section.box-fila .box-personas .container-inner').css('transition','all ease-in-out 0.2s');
+ $('section.box-fila .box-personas .container-outer').css('overflow','hidden');
 
 $('input[type=range]').val('0');
 $('input[type=range]').on('change input', function() {
-  var max 			= 100;
-  var value 		= $(this).val();
-  var percent 		= value / max;
-  var parent_height = $('section.box-fila .box-personas .container-outer').width();
-  var height 		= $('section.box-fila .box-personas .container-inner').width();
-  console.log("p:" + parent_height + " s:" + height + " %:" + percent);
-  var top = (parent_height - height) * percent;
-  //console.log("t", top, "h", parent_height - height);  
-  if(percent <= 1)
-    $('section.box-fila .box-personas .container-inner').css('left', top + "px");
-    
-    
-    
+	var value 		= $(this).val();
+	console.log(value);
+	var percent = value / 100;
+	console.log(percent);
+	mover = (ancho - ancho_caja)*percent;
+	console.log(mover);
+	$('section.box-fila .box-personas .container-inner').css('margin-left', "-"+mover + "px");
 })
 

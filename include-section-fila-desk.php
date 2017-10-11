@@ -63,7 +63,7 @@
         </ul>
      </div>
   </div>
-<input id="range" type="range" name="range" min="1" max="10">
+<input id="range" type="range" name="range" min="0" max="100">
 
 </div>
 
