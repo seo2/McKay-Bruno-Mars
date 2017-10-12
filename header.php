@@ -107,7 +107,7 @@ fbq('track', 'PageView');
 		                <li><a href="como-gano.php">cómo participo</a></li>
 		                <li class="visible-xs"><a href="productos.php">productos</a></li>
 		                <li class="visible-xs"><a href="ganadores.php">ganadores</a></li>
-		                <li><a href="assets/descargas/Bases_McKay_125.pdf">bases legales</a></li>
+		                <li><a href="assets/descargas/Bases_Legales_Bruno_Mars_McKay.pdf">bases legales</a></li>
 		                <li><a href="contacto.php">contacto</a></li>
 		                <li class="hidden-xs">
 			                <a href="javascript:void(0);" class="btnnuevomenu"><i class="fa fa-bars" aria-hidden="true"></i></a>

@@ -6,7 +6,6 @@
             <li>
             	<img src="assets/img/persona-xs.png" alt="">
             	<div class="container-persona">
-            		<div class="divisor"></div>
             		<div class="cajita-nombre-persona clearfix">
             				<div class="num_circle">1</div>
             				<div class="nombre-codigo">
@@ -19,7 +18,6 @@
 							<img src="assets/img/persona-xs.png" alt="">
             	<div class="container-persona">
 
-            		<div class="divisor"></div>
             		<div class="cajita-nombre-persona clearfix">
             				<div class="num_circle">22</div>
             				<div class="nombre-codigo">
@@ -32,7 +30,6 @@
 							<img src="assets/img/persona-xs.png" alt="">
             	<div class="container-persona">
 
-            		<div class="divisor"></div>
             		<div class="cajita-nombre-persona clearfix">
             				<div class="num_circle">100</div>
             				<div class="nombre-codigo">
