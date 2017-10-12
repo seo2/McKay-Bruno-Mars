@@ -30,7 +30,7 @@
 	}
 	
 	// ahora se validan todos.
-	$ok = 1;
+	//$ok = 1;
 	
 	echo $ok;
 
