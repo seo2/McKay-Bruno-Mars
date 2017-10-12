@@ -941,6 +941,6 @@ section.box-fila .box-personas ul li:last-child { margin-right: 0; }
 .container-persona { width: 88%; float: right; margin-top: 0; }
 .container-persona .divisor { position: absolute; height: 4px; border-top: 3px solid white; left: 0; top: 0; }
 .container-persona .cajita-nombre-persona { background-color: #B61712; border: 4px solid white; border-radius: 3px; position: relative; overflow: hidden; height: 38px; }
-.container-persona .cajita-nombre-persona .num_circle { border-radius: 50%; width: 44px; height: 44px; padding: 8px 0 0 0; background: white; text-align: center; position: absolute; left: -4px; font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px; color: #8b0000; display: inline-block; z-index: 1; top: -6px; }
+.container-persona .cajita-nombre-persona .num_circle { border-radius: 50%; width: 44px; height: 44px; padding: 8px 0 0 0; background: white; text-align: center; position: absolute; left: -6px; font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: 20px; color: #8b0000; display: inline-block; z-index: 1; top: -7px; }
 .container-persona .cajita-nombre-persona .nombre-codigo p { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif; font-weight: 700; font-size: white; color: 21px; position: absolute; top: 50%; -webkit-transform: translate(0, -50%); transform: translate(0, -50%); text-transform: uppercase; color: white !important; right: 10px; }
 .container-persona .cajita-nombre-persona .nombre-codigo .codigo { color: #FBB032; }
