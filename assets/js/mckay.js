@@ -418,8 +418,8 @@ $('section.box-fila .box-personas ul li').each(function(i, obj) {
 });
 var ancho_caja = $('section.box-fila .box-personas .container-outer').width();
  $('section.box-fila .box-personas .container-inner').width(ancho+'px');
- $('section.box-fila .box-personas .container-inner').css('transition','all ease-in-out 0.2s');
- $('section.box-fila .box-personas .container-outer').css('overflow','hidden');
+ //$('section.box-fila .box-personas .container-inner').css('transition','all ease-in-out 0.2s');
+// $('section.box-fila .box-personas .container-outer').css('overflow','hidden');
 
 $('input[type=range]').val('0');
 $('input[type=range]').on('change input', function() {

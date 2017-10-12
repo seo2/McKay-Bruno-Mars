@@ -20,14 +20,14 @@
 						 <div class="" id="formcod">
 						      <?php
 						        if( $detect->isMobile() && !$detect->isTablet() ){
-						          // include('include-form-codigo-mobile.php');
+						          include('include-form-codigo-mobile.php');
 						      }else{
-						          //    include('include-form-codigo-desk.php');
+						          include('include-form-codigo-desk.php');
 						      }
 						      ?>
 						      <?php
-						         // include('include-form-codigo-mobile.php');
-						          include('include-form-codigo-desk.php');
+						        //include('include-form-codigo-mobile.php');
+						         // include('include-form-codigo-desk.php');
 						       ?>
 						  </div>
 						</div> <!-- row -->
