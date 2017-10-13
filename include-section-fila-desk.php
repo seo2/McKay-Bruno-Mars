@@ -6,18 +6,35 @@
         <ul>
 	        <?php  
 				function nombre($lol){
-				$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
-				$resultado = $db->rawQuery("select * from mckay125_participantes where mk125_ID = $lol");
-				if($resultado){
-					foreach ($resultado as $r) {
-						$participantes   = $r["mk125_nom"];
-					}
-				}  
-				return $participantes;
+					$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
+					$resultado = $db->rawQuery("select * from mckay125_participantes where mk125_ID = $lol");
+					if($resultado){
+						foreach ($resultado as $r) {
+							$participantes   = $r["mk125_nom"];
+						}
+					}  
+					return $participantes;
+				}
+				function id_x_rut($lol){
+					$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
+					$resultado = $db->rawQuery("select * from mckay125_participantes where mk125_rut LIKE '%$lol%'");
+					if($resultado){
+						foreach ($resultado as $r) {
+							$participantes   = $r["mk125_ID"];
+						}
+					}  
+					return $participantes;
 				}
 		        $weeknumber = date("W"); 
 		        $i = 0;
-				$sql = "SELECT COUNT( * ) AS total, WEEK( codTS ) AS week_number, codUS FROM mckay125_codigos WHERE WEEK( codTS ) = 38 GROUP BY codUS ORDER BY total DESC LIMIT 100" ;
+		        
+		        if($_GET['rut']){
+			        $codUS = id_x_rut($_GET['rut']);
+			        
+					$sql = "SELECT COUNT( * ) AS total, WEEK( codTS ) AS week_number, codUS FROM mckay125_codigos WHERE WEEK( codTS ) = 38 GROUP BY codUS ORDER BY total DESC LIMIT 100" ;
+		        }else{
+					$sql = "SELECT COUNT( * ) AS total, WEEK( codTS ) AS week_number, codUS FROM mckay125_codigos WHERE WEEK( codTS ) = 38 GROUP BY codUS ORDER BY total DESC LIMIT 100" ;   
+		        }
 				$semanas = $db->rawQuery($sql);
 				if($semanas){
 					foreach ($semanas as $s) {

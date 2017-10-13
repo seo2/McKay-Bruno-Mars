@@ -13,60 +13,60 @@
 		</section>
 	<div class="container-fluid nopad">
 		<section class="box-formulario-codigo">
-				<div class="container">
-						<div class="row">
-						 <div class="" id="formcod">
-						      <?php
-						        if( $detect->isMobile() && !$detect->isTablet() ){
-						          include('include-form-codigo-mobile.php');
-						      }else{
-						          include('include-form-codigo-desk.php');
-						      }
-						      ?>
-						  </div>
-						</div> <!-- row -->
-				</div>
+			<div class="container">
+				<div class="row">
+					<div class="" id="formcod">
+					<?php
+					    if( $detect->isMobile() && !$detect->isTablet() ){
+					    	include('include-form-codigo-mobile.php');
+					    }else{
+					        include('include-form-codigo-desk.php');
+					    }
+					?>
+					</div>
+				</div> <!-- row -->
+			</div>
 		</section>
 		<section class="box-fila">
 			<div class="container">
 				<div class="row">
-
-
-
 				<form id="busca-nombre" class="form-inline hidden-xs hidden-sm">
-							<div class="form-group">
-
-							  <input type="email" class="form-control" id="name" placeholder="Ingresa tu nombre">
-							</div>
-							<div class="form-group">
-								<button type="submit" class="btn btn-default bt-buscar">
-									<i class="fa fa-search" aria-hidden="true"></i>
-								</button>
-
-							</div>
+					<div class="form-group">
+						<input type="text" class="form-control" id="elrut" name="rut" placeholder="Búscate por tu RUT (1111111-0)">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-default bt-buscar" id="btnBuscar">
+							<i class="fa fa-search" aria-hidden="true"></i>
+						</button>
+					</div>
 				</form> <!-- busca nombre -->
-
-
-					<div class="col-sm-12 visible-xs visible-sm">
-						<form id="busca-nombre2" class="navbar-form visible-xs visible-sm" role="search">
+				<div class="col-sm-12 visible-xs visible-sm">
+					<form id="busca-nombre2" class="navbar-form visible-xs visible-sm" role="search">
 						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Ingresa tu nombre" name="srch-term" id="srch-term">
+							<input type="text" class="form-control" placeholder="Búscate por tu RUT" name="srch-term" id="srch-term">
 							<div class="input-group-btn">
 								<button class="btn btn-default bt-buscar" type="submit">
-										<i class="glyphicon glyphicon-search"></i>
-									</button>
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
 							</div>
 						</div>
-						</form>
-					</div>
-
-
+					</form>
+				</div>
+					<?php
+					    if( $detect->isMobile() && !$detect->isTablet() ){
+					?>
 				<div class="hidden-xs hidden-sm">
-						<?php include('include-section-fila-desk.php') ?>
+					<?php include('include-section-fila-desk.php') ?>
 				</div>
+					<?php
+					    }else{
+					?>
 				<div class="visible-xs visible-sm">
-						<?php include('include-section-fila-xs.php') ?>
+					<?php include('include-section-fila-xs.php') ?>
 				</div>
+					<?php
+					    }
+					?>
 			</div>
 			</div>
 		</section> <!-- box fila -->

@@ -409,7 +409,7 @@ setTimeout(barra, 1000);
 // var container_width = 25 * $(".container-inner ul li").length;
 //    $(".container-inner").css("width", container_width);
 
-var ancho = 400;
+var ancho = 360;
 
 $('section.box-fila .box-personas ul li').each(function(i, obj) {
    console.log($(this).width());
@@ -431,4 +431,60 @@ $('input[type=range]').on('change input', function() {
 	console.log(mover);
 	$('section.box-fila .box-personas .container-inner').css('margin-left', "-"+mover + "px");
 })
+
+$('#busca-nombre')
+    .formValidation({
+        framework: 'bootstrap',
+        excluded: ':disabled',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            rut: {
+                validators: {
+                    id: {
+                        country: 'CL',
+                        message: 'Rut Invalido'
+                    }
+                }
+            }
+        }
+    })
+    .on('err.field.fv', function(e, data) {
+            data.element
+                .data('fv.messages')
+                .find('.help-block[data-fv-for="' + data.field + '"]').hide();
+    })
+    .on('success.form.fv', function(e) {
+		e.preventDefault();
+		    $("#busca-nombre button").html('<i class="fa fa fa-spinner fa-spin"></i>');
+			elrut = $('#elrut').val();
+			$.ajax({
+			    type: "POST",
+			    url: "ajax/validacodigo1.php",
+			    data: {'rut':elrut},
+			    success: function(msg) {
+			    	console.log(msg);
+			    	if(msg=='1'){
+						
+			    	}else{
+			        	alert("Este rut no se encuentra en la base de datos");
+			    	}
+			    },
+			    error: function(xhr, status, error) {
+					//alert(status);
+				}
+
+
+
+			});
+		
+	    
+
+    })
+    .find('[name="rut"]').mask('99999999-A');
+
+});
 
