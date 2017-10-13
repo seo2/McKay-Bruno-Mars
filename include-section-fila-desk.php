@@ -4,7 +4,7 @@
   <div class="container-outer">
      <div class="container-inner">
         <ul>
-	        <?php  
+	        <?php
 				function nombre($lol){
 				$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 				$resultado = $db->rawQuery("select * from mckay125_participantes where mk125_ID = $lol");
@@ -12,10 +12,10 @@
 					foreach ($resultado as $r) {
 						$participantes   = $r["mk125_nom"];
 					}
-				}  
+				}
 				return $participantes;
 				}
-		        $weeknumber = date("W"); 
+		        $weeknumber = date("W");
 		        $i = 0;
 				$sql = "SELECT COUNT( * ) AS total, WEEK( codTS ) AS week_number, codUS FROM mckay125_codigos WHERE WEEK( codTS ) = 38 GROUP BY codUS ORDER BY total DESC LIMIT 100" ;
 				$semanas = $db->rawQuery($sql);
@@ -23,7 +23,7 @@
 					foreach ($semanas as $s) {
 						$codigos_semana = $s["total"];
 						$i++;
-		    ?>    
+		    ?>
 			<li>
 				<a href="javascript:void(0);">
 					<div class="lugar">
@@ -36,9 +36,9 @@
 					<img src="assets/img/persona.png" alt="">
 				</a>
 			</li>
-			<?php					
+			<?php
 					}
-				}   
+				}
 			?>
 
         </ul>

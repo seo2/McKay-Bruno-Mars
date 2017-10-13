@@ -13,16 +13,25 @@
 							<div class="row text-center">
 								<h3>GANADORES</h3>
 								<h4>REVISA AQUÍ LOS GANADORES</h4>
+								<div class="texto_amarillo visible-xs">
+										<p>*ganador sujeto a verificación</p>
+									</div>
 									<div class="linea-amarilla"></div>
 							</div>
 							<div class="row">
 								<div class="col-sm-12" id="caja_ganadores">
 									<div class="row head_caja">
-										<div class="col-xs-8 text-center texto-gris">
+										<div class="col-xs-4 text-center texto-gris hidden-xs hidden-sm">
 											NOMBRE
 										</div>
-										<div class="col-xs-4 text-center texto-rojo">
-											RUT
+										<div class="col-xs-6 col-sm-4 text-center texto-gris visible-xs visible-sm">
+											NOMBRE / RUT
+										</div>
+										<div class="col-xs-4 text-center texto-rojo hidden-xs">
+											<div> RUT</div>
+										</div>
+										<div class="col-xs-6 col-sm-4 text-center texto-gris">
+											Nº CÓDIGOS
 										</div>
 									</div>
 								  <?php
@@ -35,14 +44,24 @@
 											$mk125_Fec  = $r["ganFec"];
 									?>
 									<div class="row content_caja">
-										<div class="col-xs-8 text-center caja_nom">
+										<div class="col-xs-6 col-sm-4 text-center caja_nom">
 											<p>
-											<?php echo $mk125_Nom; ?>
+												 <?php echo $mk125_Nom; ?>
+
+											</p>
+											<div class="visible-xs rut-xs">
+												 <?php echo $mk125_Rut; ?>
+											</div>
+
+										</div>
+										<div class="col-xs-4 text-center caja_rut hidden-xs">
+											<p class="hidden-xs">
+													<?php echo $mk125_Rut; ?>
 											</p>
 										</div>
-										<div class="col-xs-4 text-center caja_rut">
+										<div class="col-xs-6 col-sm-4 text-center caja_rut">
 											<p>
-											<?php echo $mk125_Rut; ?>
+													123456
 											</p>
 										</div>
 									</div>
@@ -51,19 +70,32 @@
 									}
 								?>
 
-									<div class="row" id="footer_caja">
-										<div class="col-sm-12 text-center">
-											<p>*Los GANADORES están sujetos a verificación.</p>
-										</div>
-									</div>
-								</div>
+
+								</div> <!-- caja ganadores -->
 							</div>
 						</div>
+
 					</div>
+
+
 				</div>
-            </div>
+
+
+
+
+									<div class="texto_amarillo hidden-xs">
+										<p>*ganador sujeto a verificación</p>
+									</div>
+
+
+
+            </div> <!-- content ganadores -->
+
         </section>
+
     </div><!-- row -->
+
+
   </div> <!-- container -->
   <div class="clearfix"></div>
 <?php include('footer.php') ?>
