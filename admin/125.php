@@ -14,7 +14,7 @@
 
 	function total_participantes($lol){
 		$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
-		$resultado = $db->rawQuery('select count(*) as total from mckay125_participantes where mk125_rts >= "2017-10-13 00:00:00"');
+		$resultado = $db->rawQuery('select count(*) as total from mckay125_participantes');
 		if($resultado){
 			foreach ($resultado as $r) {
 				$participantes   = $r["total"];
@@ -25,7 +25,7 @@
 
 	function total_codigos($lol){
 		$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
-	  	$resultado = $db->rawQuery('select count(*) as total from mckay125_codigos where codRTS >= "2017-10-13 00:00:00"');
+	  	$resultado = $db->rawQuery('select count(*) as total from mckay125_codigos');
 		if($resultado){
 			foreach ($resultado as $r) {
 				$codigos   = $r["total"];
@@ -34,7 +34,6 @@
 		return $codigos;
 	}
 
-/*
 	function total_instawins($lol){
 		$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 	  	$resultado = $db->rawQuery('select count(*) as total from mckay125_participantes where mk125_gan = 1');
@@ -45,9 +44,7 @@
 		}   
 		return $instawins;
 	}
-*/
 
-/*
 	function total_suenomillonario($lol){
 		$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
 	  	$resultado = $db->rawQuery('select count(*) as total from mckay125_sueno');
@@ -58,7 +55,6 @@
 		}   
 		return $instawins;
 	}
-*/
 
 	function total_hombres($lol){
 		$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
@@ -97,7 +93,7 @@
 	function codigos_dia($dia){
 		
 		$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
-	  	$resultado = $db->rawQuery("SELECT count(*) as total FROM mckay125_codigos WHERE DAYOFWEEK(codRTS) = $dia and codRTS >= '2017-10-13 00:00:00'");
+	  	$resultado = $db->rawQuery("SELECT count(*) as total FROM mckay125_codigos WHERE DAYOFWEEK(codRTS) = $dia");
 		if($resultado){
 			foreach ($resultado as $r) {
 				$total   = $r["total"];
@@ -110,7 +106,7 @@
 	function participantes_dia($dia){
 		
 		$db = new MysqliDb (DBHOST, DBUSER, DBPASS, DBNAME);
-	  	$resultado = $db->rawQuery("SELECT count(*) as total FROM mckay125_participantes WHERE DAYOFWEEK(mk125_rts) = $dia and mk125_rts >= '2017-10-13 00:00:00'");
+	  	$resultado = $db->rawQuery("SELECT count(*) as total FROM mckay125_participantes WHERE DAYOFWEEK(mk125_rts) = $dia");
 		if($resultado){
 			foreach ($resultado as $r) {
 				$total   = $r["total"];
@@ -154,7 +150,36 @@
 					  	</div>
 					</div>
 				</li>
-
+<!--
+				<li>
+						<?php
+							
+							$porcentaje		= round((100 * total_hombres($lol))/total_participantes($lol),2);
+						?>
+					<i class="icon-symbol-male"></i>
+					<div class="number"><?php echo total_hombres($lol); ?></div>
+					<div class="title">Hombres <?php echo $porcentaje; ?>%</div>
+					<div class="progress thin">
+					  	<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentaje; ?>%">
+					    	<span class="sr-only">73% Complete (success)</span>
+					  	</div>
+					</div>
+				</li>
+				<li>
+					<?php
+						
+						$porcentaje		= round((100 * total_mujeres($lol))/total_participantes($lol),2);
+					?>
+					<i class=" icon-symbol-female"></i>
+					<div class="number"><?php echo total_mujeres($lol); ?></div>
+					<div class="title">Mujeres <?php echo $porcentaje; ?>%</div>
+					<div class="progress thin">
+					  	<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentaje; ?>%">
+					    	<span class="sr-only">73% Complete (success)</span>
+					  	</div>
+					</div>
+				</li>
+-->
 				<li>
 					<i class="icon-badge"></i>
 					<div class="number"><?php echo total_codigos($lol); ?></div>
@@ -165,7 +190,48 @@
 					  	</div>
 					</div>
 				</li>
-
+				<li>
+					<i class="icon-trophy"></i>
+					<div class="number"><?php echo total_instawins($lol); ?></div>
+					<div class="title">Instawins</div>
+					<div class="progress thin">
+					  	<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
+					    	<span class="sr-only">73% Complete (success)</span>
+					  	</div>
+					</div>
+				</li>
+				<li>
+					<i class="icon-cloud-upload"></i>
+					<div class="number"><?php echo total_suenomillonario($lol); ?></div>
+					<div class="title">Sueño Millonario <span class="<?php echo $clase; ?>">[<?php echo $estadosueno; ?>]</span></div>
+					<div class="progress thin">
+					  	<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
+					    	<span class="sr-only">73% Complete (success)</span>
+					  	</div>
+					</div>
+				</li>
+<!--
+				<li>
+					<i class="icon-speedometer"></i>
+					<div class="number">5:34:11</div>
+					<div class="title">Avg. time</div>
+					<div class="progress thin">
+					  	<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
+					    	<span class="sr-only">73% Complete (success)</span>
+					  	</div>
+					</div>
+				</li>
+				<li>
+					<i class="icon-speech"></i>
+					<div class="number">972</div>
+					<div class="title">New comments</div>
+					<div class="progress thin">
+					  	<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width: 73%">
+					    	<span class="sr-only">73% Complete (success)</span>
+					  	</div>
+					</div>
+				</li>
+-->
 			</ul>			
 
 			
@@ -183,18 +249,16 @@
 						<div class="panel-body">
 
 					<?php
-							$sql = "SELECT COUNT(*) AS total,  WEEK(mk125_ts) as week_number FROM  mckay125_participantes where mk125_rts >= '2017-10-13 00:00:00' GROUP BY WEEK(mk125_rts, 1) order by week_number DESC";
+							$sql = "SELECT COUNT(*) AS total,  WEEK(mk125_ts) as week_number FROM  mckay125_participantes GROUP BY WEEK(mk125_rts, 1) order by week_number DESC";
 								$semanas = $db->rawQuery($sql);
 								if($semanas){
 									foreach ($semanas as $s) {
 										$participantes_semana = $s["total"];
-										$lunes   			  = lunes_semana($s["week_number"],2017);
+										$lunes   		= lunes_semana($s["week_number"],2017);
 										$totalparticipantes   = total_participantes($lol);
-										if($totalparticipantes>0){
-											$porcentaje		= round((100 * $participantes_semana)/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										
+										$porcentaje		= round((100 * $participantes_semana)/$totalparticipantes,2);
+										
 										
 							 ?>
 							<h6>Semana <?php echo $lunes; ?> <strong><?php echo $participantes_semana; ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
@@ -223,18 +287,15 @@
 						<div class="panel-body">
 
 					<?php						
-						$sql = "SELECT COUNT(*) AS total,  WEEK(codTS) as week_number FROM mckay125_codigos where codRTS >= '2017-10-13 00:00:00' GROUP BY WEEK(codRTS, 1) order by week_number DESC";
+						$sql = "SELECT COUNT(*) AS total,  WEEK(codTS) as week_number FROM mckay125_codigos GROUP BY WEEK(codRTS, 1) order by week_number DESC";
 								$semanas = $db->rawQuery($sql);
 								if($semanas){
 									foreach ($semanas as $s) {
 										$codigos_semana = $s["total"];
 										$lunes   		= lunes_semana($s["week_number"],2017);
 										$totalcodigos   = total_codigos($lol);
-										if($totalcodigos>0){
-											$porcentaje	= round((100 * $codigos_semana)/$totalcodigos,2);
-										}else{
-											$porcentaje = 0;
-										}
+										
+										$porcentaje		= round((100 * $codigos_semana)/$totalcodigos,2);
 							 ?>
 							<h6>Semana <?php echo $lunes; ?> <strong><?php echo $codigos_semana; ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">
@@ -271,18 +332,16 @@
 						<div class="panel-body">
 
 					<?php
-							$sql = "SELECT COUNT(*) AS total, mk125_reg FROM mckay125_participantes where mk125_rts >= '2017-10-13 00:00:00' GROUP BY mk125_reg ";
+							$sql = "SELECT COUNT(*) AS total, mk125_reg FROM mckay125_participantes GROUP BY mk125_reg";
 								$semanas = $db->rawQuery($sql);
 								if($semanas){
 									foreach ($semanas as $s) {
 										$participantes_region 	= $s["total"];
 										$region   				= region($s["mk125_reg"]);
 										$totalparticipantes   	= total_participantes($lol);
-										if($totalparticipantes>0){
-											$porcentaje	= round((100 * $participantes_region)/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										
+										$porcentaje		= round((100 * $participantes_region)/$totalparticipantes,2);
+										
 										
 							 ?>
 							<h6> <?php echo $region; ?> <strong><?php echo $participantes_region; ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
@@ -299,7 +358,48 @@
 					</div>		
 				</div><!--/col-->
 				
-							
+								
+				<div class="col-lg-6 col-sm-6">
+					
+					<div class="panel panel-default">
+						
+						<div class="panel-heading">
+							<i class="icon-compass"></i><h2>Sueños</h2>
+						</div>
+						
+						<div class="panel-body">
+
+					<?php						
+							$sql = "SELECT COUNT(*) AS total, mk125_cat FROM mckay125_participantes GROUP BY mk125_cat";
+								$semanas = $db->rawQuery($sql);
+								if($semanas){
+									foreach ($semanas as $s) {
+										$total_sueno = $s["total"];
+										$mk125_cat   	= $s["mk125_cat"];
+										$totalparticipantes   = total_participantes($lol);
+										if($mk125_cat==''){
+											$mk125_cat = 'Sin selección';
+										}
+										$porcentaje		= round((100 * $total_sueno)/$totalparticipantes,2);
+							 ?>
+							<h6><?php echo $mk125_cat; ?> <strong><?php echo $total_sueno; ?></strong> <?php echo $porcentaje; ?>%</h6>
+							<div class="progress thin">
+							  	<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $porcentaje; ?>%">
+							    	<span class="sr-only"><?php echo $porcentaje; ?>% Complete (success)</span>
+							  	</div>
+							</div>
+							<?php					
+									}
+								}   
+							?>
+						</div>
+					</div>		
+				</div><!--/col-->
+											 	
+				
+			
+				
+				
 			</div><!--/row-->
 			
 
@@ -317,11 +417,7 @@
 						<div class="panel-body">
 							<?php
 										$totalparticipantes   = total_participantes($lol);
-										if($totalparticipantes>0){
-											$porcentaje = round((100 * participantes_dia(2))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * participantes_dia(2))/$totalparticipantes,2);
 							?>
 							<h6>Lunes <strong><?php echo participantes_dia(2); ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -330,11 +426,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje = round((100 * participantes_dia(3))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * participantes_dia(3))/$totalparticipantes,2);
 							?>
 							<h6>Martes <strong><?php echo participantes_dia(3); ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -343,12 +435,7 @@
 							  	</div>
 							</div>
 							<?php
-
-										if($totalparticipantes>0){
-											$porcentaje = round((100 * participantes_dia(4))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * participantes_dia(4))/$totalparticipantes,2);
 							?>
 							<h6>Miercoles <strong><?php echo participantes_dia(4); ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -357,12 +444,7 @@
 							  	</div>
 							</div>
 							<?php
-
-										if($totalparticipantes>0){
-											$porcentaje = round((100 * participantes_dia(5))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * participantes_dia(5))/$totalparticipantes,2);
 							?>
 							<h6>Jueves <strong><?php echo participantes_dia(5); ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -371,12 +453,7 @@
 							  	</div>
 							</div>
 							<?php
-
-										if($totalparticipantes>0){
-											$porcentaje = round((100 * participantes_dia(6))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * participantes_dia(6))/$totalparticipantes,2);
 							?>
 							<h6>Viernes <strong><?php echo participantes_dia(6); ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -385,11 +462,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje = round((100 * participantes_dia(7))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * participantes_dia(7))/$totalparticipantes,2);
 							?>
 							<h6>Sábado <strong><?php echo participantes_dia(7); ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -398,11 +471,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje = round((100 * participantes_dia(1))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * participantes_dia(1))/$totalparticipantes,2);
 							?>
 							<h6>Domingo <strong><?php echo participantes_dia(1); ?> Participantes</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -425,12 +494,7 @@
 						<div class="panel-body">
 							<?php
 										$totalparticipantes   = total_codigos($lol);
-
-										if($totalparticipantes>0){
-											$porcentaje			  = round((100 * codigos_dia(2))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * codigos_dia(2))/$totalparticipantes,2);
 							?>
 							<h6>Lunes <strong><?php echo codigos_dia(2); ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -439,11 +503,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje			  = round((100 * codigos_dia(3))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * codigos_dia(3))/$totalparticipantes,2);
 							?>
 							<h6>Martes <strong><?php echo codigos_dia(3); ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -452,11 +512,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje			  = round((100 * codigos_dia(4))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * codigos_dia(4))/$totalparticipantes,2);
 							?>
 							<h6>Miercoles <strong><?php echo codigos_dia(4); ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -465,11 +521,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje			  = round((100 * codigos_dia(5))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * codigos_dia(5))/$totalparticipantes,2);
 							?>
 							<h6>Jueves <strong><?php echo codigos_dia(5); ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -478,11 +530,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje			  = round((100 * codigos_dia(6))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * codigos_dia(6))/$totalparticipantes,2);
 							?>
 							<h6>Viernes <strong><?php echo codigos_dia(6); ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -491,11 +539,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje			  = round((100 * codigos_dia(7))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * codigos_dia(7))/$totalparticipantes,2);
 							?>
 							<h6>Sábado <strong><?php echo codigos_dia(7); ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	
@@ -504,11 +548,7 @@
 							  	</div>
 							</div>
 							<?php
-										if($totalparticipantes>0){
-											$porcentaje			  = round((100 * codigos_dia(1))/$totalparticipantes,2);
-										}else{
-											$porcentaje = 0;
-										}
+										$porcentaje			  = round((100 * codigos_dia(1))/$totalparticipantes,2);
 							?>
 							<h6>Domingo <strong><?php echo codigos_dia(1); ?> Códigos</strong> <?php echo $porcentaje; ?>%</h6>
 							<div class="progress thin">						  	

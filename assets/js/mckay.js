@@ -409,7 +409,7 @@ setTimeout(barra, 1000);
 // var container_width = 25 * $(".container-inner ul li").length;
 //    $(".container-inner").css("width", container_width);
 
-var ancho = 200;
+var ancho = 400;
 
 $('section.box-fila .box-personas ul li').each(function(i, obj) {
    console.log($(this).width());

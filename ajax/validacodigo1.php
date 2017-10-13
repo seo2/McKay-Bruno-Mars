@@ -7,12 +7,14 @@
 	$codigo = $_POST['codigo'];
 	$hora 	= str_replace(':', '', $_POST['hora']);
 	
+	$codigo = str_replace(' ', '', $_POST['codigo']);
 	$ok = 0;
 
-	$tema = $db->rawQuery('select * from mckay125_lote where loteLote = "'.$codigo.'"');
+	$tema = $db->rawQuery('select * from mckaybruno_lote where codigo = "'.$codigo.'"');
 	if($tema){
 		foreach ($tema as $t) {
 			
+/*
 			$horaini = str_replace(':', '', substr( $t['loteHorIni'],0,5));
 			$horater = str_replace(':', '', substr( $t['loteHorTer'],0,5));
 			if($horaini>$horater){
@@ -26,6 +28,8 @@
 					$ok = 1;
 				}
 			}
+*/
+			$ok = 1;
 		}
 	}
 	
