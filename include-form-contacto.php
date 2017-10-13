@@ -1,23 +1,55 @@
-<form id="main_contact">
-    <div class="col-sm-6">
+<form class="form-horizontal" id="main_contact">
+
         <div class="form-group">
-          <label for="nombre">nombre completo</label>
-          <input type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
+          <label class="col-sm-3 control-label"  for="nombre">nombre completo</label>
+          <div class="col-sm-9">
+              <input  type="text" class="form-control" id="nombre" name="nombre" placeholder="" required>
+          </div>
         </div>
         <div class="form-group">
-          <label for="email">email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="" required>
+          <label class="col-sm-3 control-label" for="email">email</label>
+          <div class="col-sm-9">
+              <input type="email" class="form-control" id="email" name="email" placeholder="" required>
+          </div>
         </div>
          <div class="form-group">
-          <label for="telefono">teléfono</label>
-          <input type="text" class="form-control" id="telefono" name="fono" placeholder="" required>
+          <label class="col-sm-3 control-label" for="telefono">teléfono</label>
+          <div class="col-sm-9">
+              <input type="text" class="form-control" id="telefono" name="fono" placeholder="" required>
+          </div>
         </div>
-    </div>
-    <div class="col-sm-6">
-  <div class="form-group">
-  <label for="mensaje">Mensaje</label>
-  <textarea class="form-control" rows="5" id="mensaje" name="mensaje" required></textarea>
-</div>
-    </div>
-      <button type="submit" class="btn btn-default btn_amarillo">enviar</button>
+        <div class="form-group">
+         <label class="col-sm-3 control-label" for="mensaje">Mensaje</label>
+         <div class="col-sm-9">
+            <textarea class="form-control" rows="5" id="mensaje" name="mensaje" required></textarea>
+         </div>
+      </div>
+      <div class="form-group">
+        <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+              <div class="row">
+                  <div class="col-sm-6">
+                    <div class="footer_contacto">
+                          <p>O LLÁMANOS AL <a href="tel:+56224871400">+56 2 2487 1400</a></p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <button type="submit" class="btn btn-default btn_amarillo">enviar</button>
+
+                  </div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+
+
+
+      </div>
+
 </form>
+
+
+

@@ -927,12 +927,13 @@ section.box-fila form#busca-nombre .form-control { width: 380px; height: 71px; t
 @media (max-width: 768px) { section.box-fila form#busca-nombre .form-control { width: auto; } }
 section.box-fila form#busca-nombre .bt-buscar { border-radius: 50%; width: 70px; height: 70px; margin-left: 20px; background-color: #FBB032; border: none; }
 section.box-fila form#busca-nombre .bt-buscar .fa-search { color: white; font-size: 40px; }
-section.box-fila form#busca-nombre2 .form-control { width: auto; height: 71px; text-transform: none; font-size: 23px; text-align: left; }
-section.box-fila form#busca-nombre2 .bt-buscar { border-radius: 50%; width: 40px; height: 40px; background-color: #FBB032; border: none; }
+section.box-fila form#busca-nombre2 .form-control { width: 100% !important; height: 71px; text-transform: none; font-size: 20px; text-align: left; border: none; }
+section.box-fila form#busca-nombre2 .bt-buscar { border-radius: 50%; width: 50px; height: 50px; background-color: #FBB032; border: none; margin-right: 10px; }
 section.box-fila form#busca-nombre2 .bt-buscar .fa-search { color: white; font-size: 20px; }
+section.box-fila form#busca-nombre2 .input-group .input-group-btn { background-color: #fff; border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
 section.box-fila .estadio, section.box-fila .estadio-xs { width: 281px; height: 207px; position: absolute; right: 0; top: 0; background-image: url(../img/estadio.png); background-repeat: no-repeat; background-size: cover; background-position: center; }
 section.box-fila .estadio-xs { width: 128px; height: 96px; left: 0; top: 0; }
-section.box-fila .box-personas { width: 600px; padding: 40px 0; }
+section.box-fila .box-personas { width: 600px; padding: 0 0 40px 0; }
 section.box-fila .box-personas .container-inner ul li { margin-bottom: 20px; }
 @media (max-width: 768px) { section.box-fila .box-personas { width: 100%; } }
 section.box-fila .box-personas .container-outer { overflow: scroll; width: 600px; margin-top: 40px; height: 100px; overflow: hidden; }
@@ -973,3 +974,20 @@ section.faq .content_faq { padding: 50px 0; background-image: url(../img/bg-gana
 .answer_faq .box_faq ul li { font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif !important; }
 
 section.faq .content_faq ul.preguntas li:hover, section.faq .content_faq ul.preguntas li.active, section.faq .content_faq .answer_faq h4, section.faq .heading_faq h3 { color: #FBB032; }
+
+.navbar-form { border-top: none; border-bottom: none; -webkit-box-shadow: none; box-shadow: none; }
+
+section.contacto { padding: 130px 0 40px 0; }
+@media (max-width: 768px) { section.contacto { padding-top: 260px; } }
+
+section.contacto .content_contacto { position: relative; padding: 200px; background-image: url(../img/bg-ganadores.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; }
+section.contacto .content_contacto img.hidden-xs { position: absolute; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); top: -220px; }
+section.contacto .content_contacto img.visible-xs { position: absolute; left: 50%; -webkit-transform: translate(-50%, 0); transform: translate(-50%, 0); top: -340px; }
+@media (max-width: 991px) { section.contacto .content_contacto { padding: 100px; } }
+@media (max-width: 768px) { section.contacto .content_contacto { padding: 10px; } }
+section.contacto .content_contacto .heading_contacto h3 { color: #FBB032; font-size: 35px; }
+section.contacto .content_contacto .heading_contacto p { color: white; font-size: 24px; margin: 0 0 30px 0; }
+@media (max-width: 768px) { section.contacto .content_contacto { background-image: url(../img/bg-bruno-xs.jpg); } }
+@media (max-width: 768px) { section.contacto .content_contacto { image: url(../img/bg-bruno-xs.jpg); } }
+section.contacto .content_contacto #main_contact .form-group .control-label { color: #FBB032; font-size: 20px; font-family: 'nexa_black', Helvetica, Arial, sans-serif; }
+section.contacto .content_contacto #main_contact section.contacto .content_contacto .footer_contacto p { margin: 0; }

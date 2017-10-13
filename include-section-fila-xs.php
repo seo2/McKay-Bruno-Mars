@@ -1,4 +1,4 @@
-<div class="estadio-xs"></div>
+<!-- <div class="estadio-xs"></div> -->
 <div class="box-personas">
   <div class="container-outer">
      <div class="container-inner">

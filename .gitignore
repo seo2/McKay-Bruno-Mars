@@ -6,3 +6,5 @@ assets/img/.DS_Store
 *.scss
 *.scss
 .DS_Store
+*.scss
+*.scss

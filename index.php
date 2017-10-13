@@ -29,7 +29,11 @@
 		</section>
 		<section class="box-fila">
 			<div class="container">
-				<form id="busca-nombre" class="form-inline hidden-xs">
+				<div class="row">
+
+
+
+				<form id="busca-nombre" class="form-inline hidden-xs hidden-sm">
 							<div class="form-group">
 
 							  <input type="email" class="form-control" id="name" placeholder="Ingresa tu nombre">
@@ -42,30 +46,19 @@
 							</div>
 				</form> <!-- busca nombre -->
 
-				<form id="busca-nombre2" class="form-inline">
 
-								<div class="row">
-											<div class="col-xs-2">
-												<img class="img-responsive" src="assets/img/estadio.png" alt="">
-											</div>
-										<div class="col-xs-8">
-											<div class="form-group">
-												<input type="email" class="form-control" id="name" placeholder="Ingresa tu nombre">
-											</div>
-										</div>
-										<div class="col-xs-2">
-												<div class="form-group">
-													<button type="submit" class="btn btn-default bt-buscar">
-														<i class="fa fa-search" aria-hidden="true"></i>
-													</button>
-												</div>
-										</div>
-								</div>
-
-
-
-				</form> <!-- busca nombre -->
-
+					<div class="col-sm-12 visible-xs visible-sm">
+						<form id="busca-nombre2" class="navbar-form visible-xs visible-sm" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Ingresa tu nombre" name="srch-term" id="srch-term">
+							<div class="input-group-btn">
+								<button class="btn btn-default bt-buscar" type="submit">
+										<i class="glyphicon glyphicon-search"></i>
+									</button>
+							</div>
+						</div>
+						</form>
+					</div>
 
 
 				<div class="hidden-xs hidden-sm">
@@ -74,6 +67,7 @@
 				<div class="visible-xs visible-sm">
 						<?php include('include-section-fila-xs.php') ?>
 				</div>
+			</div>
 			</div>
 		</section> <!-- box fila -->
 	</div>
