@@ -3,10 +3,418 @@ section.call{
 }
 section.box-fila{
     min-height: 240px;
+    position: relative;
+    margin-top: 30px;
+    form#busca-nombre{
+      @media(max-width:768px){
+        float: right;
+      }
+      .form-control{
+          width: 380px;
+          height: 71px;
+          text-transform: none;
+          font-size: 23px;
+          text-align: left;
+           @media(max-width:768px){
+              width: auto;
+          }
+      }
+      .bt-buscar{
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
+        background-color: $amarillo2;
+        border: none;
+          .fa-search{
+            color: white;
+            font-size: 40px;
+          }
+      }
+    }
+    form#busca-nombre2{
+     .input-group-btn{
+
+     }
+      .form-control{
+        width: 100%!important;
+          height: 71px;
+          text-transform: none;
+          font-size: 20px;
+          text-align: left;
+          border:none;
+      }
+      .bt-buscar{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+       //margin-left: 20px;
+        background-color: $amarillo2;
+        border: none;
+       margin-right: 10px;
+          .fa-search{
+            color: white;
+            font-size: 20px;
+          }
+      }
+      .input-group{
+        .input-group-btn{
+          background-color: #fff;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+    }
+
+    .estadio{
+        width: 281px;
+        height: 207px;
+        position: absolute;
+
+        right: 0;
+        top:0;
+        //bottom: 0;
+          background:{
+          image: url(../img/estadio.png);
+          repeat: no-repeat;
+          size: cover;
+          position:center;
+       }
+    }
+    .estadio-xs{
+     @extend .estadio;
+     width: 128px;
+     height: 96px;
+
+     left: 0;
+
+     top: 0;
+    }
+
+.box-personas{
+  width: 600px;
+  padding: 0 0 40px 0;
+  .container-inner ul li{
+      margin-bottom: 20px;
+  }
+
+  @media(max-width:768px){
+    width: 100%;
+   // overflow: hidden;
+     //overflow-x: hidden;
+
+      //height: auto;
+  }
+  .container-outer {
+        overflow: scroll;
+        width:600px;
+        //height:80px;
+       // overflow-y: hidden;
+        margin-top: 80px;
+        height: 100px;
+        overflow: hidden;
+        @media(max-width:768px){
+          width: 100%;
+          height: 50vh;
+          overflow: auto;
+        }
+    }
+    .container-inner {
+        width: 6000px;
+        margin-bottom: 9px;
+        transition: all ease-in-out 0.2s;
+        @media(max-width:768px){
+          //display: block;
+            width: 100% !important;
+            margin-bottom: 0;
+          //  background-color: tomato;
+        }
+    }
+    ul{
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+        li{
+          margin: 0 10px;
+          display: inline-block;
+          @media(max-width:768px){
+            display: block;
+          }
+            a{
+              display: inline-block;
+              cursor: pointer;
+
+            }
+
+          a .persona-activa{
+              opacity: 0;
+          }
+
+          a:hover .persona-activa{
+              opacity: 1;
+          }
+            a .lugar{
+                opacity: 0;
+                top: 110px;
+            }
+            a:hover .lugar {
+                opacity: 1;
+                top: 90px;
+            }
+            &:first-child{
+              margin-left: 0;
+               @media(max-width:768px){
+                 margin-left: 10px;
+                }
+            }
+            &:last-child{
+              margin-right: 0;
+               @media(max-width:768px){
+                 margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+}
+#huincha_texto_xs{
+  background-color: $amarillo2;
+  padding: 12px 0 1px 0;
+    p.nota{
+      @include roboto_bold(18px, white);
+     // line-height: 16px;
+     // margin-top: 20px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+}
+
+.container-persona{
+  width: 88%;
+  float: right;
+  margin-top: 0;
+
+  .divisor{
+      position: absolute;
+      height: 4px;
+      border-top: 3px solid white;
+      left: 0;
+      top: 0;
+  }
+  .cajita-nombre-persona{
+    background-color: #B61712;
+    border: 4px solid white;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    height: 38px;
+    .num_circle {
+          border-radius: 50%;
+          width: 44px;
+          height: 44px;
+          padding: 8px 0 0 0;
+          background: white;
+          text-align: center;
+          position: absolute;
+          left: -6px;
+          @include roboto_bold(20px, $rojo);
+          display: inline-block;
+          z-index: 1;
+          top: -7px;
+      }
+      .nombre-codigo{
+        p{
+          @include roboto_bold(white,21px);
+          @include centerer(false, true);
+          text-transform: uppercase;
+          color: white !important;
+          //text-align: right;
+          right: 10px;
+        }
+        .codigo{
+            color: $amarillo2;
+          }
+      }
+  }
+
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background-color: $amarillo;
+    border: 1px solid #BE6417;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    outline: none;
+}
+input[type="range"]{
+    outline: none;
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    background: $amarillo2;
+    height: 8px;
 }
 
 
+section.faq{
+  padding: 50px 0;
+  .content_faq{
+          padding: 50px 0;
+         background:{
+             image: url(../img/bg-ganadores.jpg);
+             repeat: no-repeat;
+             size: cover;
+             position:center;
+          }
 
+
+
+  }
+}
+
+   .answer_faq{
+        .box_faq{
+          background-color: #534846;
+          ul {
+            li{
+              font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif !important;
+            }
+          }
+        }
+      }
+
+section.faq .content_faq ul.preguntas li:hover,
+section.faq .content_faq ul.preguntas li.active,
+section.faq .content_faq .answer_faq h4,
+section.faq .heading_faq h3{
+  color: $amarillo2;
+}
+
+.navbar-form{
+  border-top: none;
+  border-bottom: none;
+  box-shadow: none;
+}
+section.contacto{
+  padding: 130px 0 40px 0;
+   @media(max-width: 768px){
+        padding-top: 260px;
+      }
+}
+section.contacto .content_contacto{
+  position: relative;
+  img.hidden-xs{
+
+    @include centerer(true, false);
+    top: -220px;
+  }
+    img.visible-xs{
+    @include centerer(true, false);
+    top: -340px;
+  }
+
+  padding: 200px;
+  @media(max-width: 991px){
+      padding :100px;
+  }
+  @media(max-width: 768px){
+      padding :10px;
+  }
+  .heading_contacto{
+    h3{
+        color: $amarillo2;
+        font-size: 35px;
+    }
+    p{
+      color: white;
+      font-size: 24px;
+      margin: 0 0 30px 0;
+    }
+  }
+  background:{
+      image: url(../img/bg-ganadores.jpg);
+      repeat: no-repeat;
+      size: cover;
+      position:center;
+   }
+    @media(max-width: 768px){
+     background-image: url(../img/bg-bruno-xs.jpg);
+  }
+
+ @media(max-width: 768px){
+         image: url(../img/bg-bruno-xs.jpg);
+      }
+   #main_contact {
+    .form-group{
+        .control-label{
+          color: $amarillo2;
+          font-size: 20px;
+          font-family: 'nexa_black', Helvetica, Arial, sans-serif;
+        }
+    }
+    section.contacto .content_contacto .footer_contacto p{
+      margin: 0;
+    }
+   }
+}
+
+
+section.ganadores {
+  .content_ganadores {
+    position: relative;
+    overflow: hidden;
+    .texto_amarillo{
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+       @media(max-width: 768px){
+         position: relative;
+         right: auto;
+         bottom: auto;
+      }
+    }
+    #caja_ganadores {
+      @media (min-width: 0px){
+        overflow-x: hidden;
+        height: 640px;
+      }
+      .head_caja{
+        margin-bottom: 15px;
+
+        @media(max-width: 768px){
+               font-size: 14px;
+             }
+
+
+      }
+      .content_caja{
+        .caja_rut{
+            padding-left: 15px;
+        }
+        .caja_nom{
+          padding-right: 15px;
+        }
+        p {
+              font-size: 9px;
+                @media(max-width: 768px){
+                 line-height: 20px;
+              }
+
+        }
+      }
+    }
+  }
+}
+
+section.ingreso_datos{
+  background-color: $cafe;
+  .btn_amarillo{
+    background-color: $amarillo2;
+    color: white;
+  }
+
+}
 
 
 
