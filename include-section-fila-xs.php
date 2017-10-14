@@ -63,7 +63,7 @@
             		<div class="cajita-nombre-persona clearfix">
             				<div class="num_circle"><?php echo $i; ?></div>
             				<div class="nombre-codigo">
-            					<p><?php echo nombre($s["codUS"]); ?> <span class="codigo"><?php echo $codigos_semana; ?> códigos</span></p>
+            					<p><?php echo nombre($s["codUS"]); ?> <span class="codigo"><?php echo $codigos_semana; ?> código<?php if($codigos_semana>1){ ?>s<?php } ?></span></p>
             				</div>
             		</div>
             	</div>
