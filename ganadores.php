@@ -35,13 +35,14 @@
 										</div>
 									</div>
 								  <?php
-								  	$resultado = $db->rawQuery('select * from mckay125_ganadores order by ganID DESC');
+								  	$resultado = $db->rawQuery('select * from mckaybruno_ganadores order by ganID DESC');
 									if($resultado){
 										foreach ($resultado as $r) {
 											$mk125_ID   = $r["ganID"];
 											$mk125_Nom  = $r["ganNom"];
 											$mk125_Rut  = $r["ganRut"];
 											$mk125_Fec  = $r["ganFec"];
+											$ganCod  = $r["ganCod"];
 									?>
 									<div class="row content_caja">
 										<div class="col-xs-6 col-sm-4 text-center caja_nom">
@@ -61,7 +62,7 @@
 										</div>
 										<div class="col-xs-6 col-sm-4 text-center caja_rut">
 											<p>
-													123456
+													<?php echo $ganCod; ?>
 											</p>
 										</div>
 									</div>

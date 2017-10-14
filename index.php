@@ -30,6 +30,22 @@
 		<section class="box-fila">
 			<div class="container">
 				<div class="row">
+				<?php
+				    if( $detect->isMobile() && !$detect->isTablet() ){
+				?>		
+				<div class="col-sm-12 visible-xs visible-sm">
+					<form id="busca-nombre2" class="navbar-form visible-xs visible-sm" role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Búscate por tu RUT (1111111-0)" name="rut" id="elrut">
+							<div class="input-group-btn">
+								<button class="btn btn-default bt-buscar" type="submit" id="btnBuscar">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+				<?php    }else{ ?>
 				<form id="busca-nombre" class="form-inline hidden-xs hidden-sm">
 					<div class="form-group">
 						<input type="text" class="form-control" id="elrut" name="rut" placeholder="Búscate por tu RUT (1111111-0)">
@@ -40,31 +56,14 @@
 						</button>
 					</div>
 				</form> <!-- busca nombre -->
-				<div class="col-sm-12 visible-xs visible-sm">
-					<form id="busca-nombre2" class="navbar-form visible-xs visible-sm" role="search">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Búscate por tu RUT" name="srch-term" id="srch-term">
-							<div class="input-group-btn">
-								<button class="btn btn-default bt-buscar" type="submit">
-									<i class="glyphicon glyphicon-search"></i>
-								</button>
-							</div>
-						</div>
-					</form>
-				</div>
+				<?php
+				    }
+				?>		
 					<?php
 					    if( $detect->isMobile() && !$detect->isTablet() ){
-					?>
-				<div class="hidden-xs hidden-sm">
-					<?php include('include-section-fila-desk.php') ?>
-				</div>
-					<?php
+							include('include-section-fila-xs.php');
 					    }else{
-					?>
-				<div class="visible-xs visible-sm">
-					<?php include('include-section-fila-xs.php') ?>
-				</div>
-					<?php
+							include('include-section-fila-desk.php');
 					    }
 					?>
 			</div>

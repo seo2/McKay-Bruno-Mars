@@ -409,7 +409,7 @@ setTimeout(barra, 1000);
 // var container_width = 25 * $(".container-inner ul li").length;
 //    $(".container-inner").css("width", container_width);
 
-var ancho = 360;
+var ancho = 380;
 
 $('section.box-fila .box-personas ul li').each(function(i, obj) {
    console.log($(this).width());
@@ -425,12 +425,53 @@ $('input[type=range]').val('0');
 $('input[type=range]').on('change input', function() {
 	var value 		= $(this).val();
 	console.log(value);
-	var percent = value / 100;
+	var percent = value / 10;
 	console.log(percent);
 	mover = (ancho - ancho_caja)*percent;
 	console.log(mover);
-	$('section.box-fila .box-personas .container-inner').css('margin-left', "-"+mover + "px");
+	$('.container-inner').css('margin-left', "-"+mover + "px");
 })
+
+
+$('.container-inner ul li a').on('mouseover',function(){
+	pos = $(this).data('posicion');
+	val = $('input[type=range]').val();
+	console.log('pos: '+pos+' val: '+val);
+	if(val==0 && pos>6){
+		factor 	= (pos - 7) + 1;
+	}else if(val==1 && pos>14){
+		factor 	= (pos - 15) + 1;
+	}else if(val==2 && pos>23){
+		factor 	= (pos - 24) + 1;
+	}else if(val==3 && pos>32){
+		factor 	= (pos - 33) + 1;
+	}else if(val==4 && pos>41){
+		factor 	= (pos - 42) + 1;
+	}else if(val==5 && pos>49){
+		factor 	= (pos - 50) + 1;
+	}else if(val==6 && pos>58){
+		factor 	= (pos - 59) + 1;
+	}else if(val==7 && pos>67){
+		factor 	= (pos - 68) + 1;
+	}else if(val==8 && pos>76){
+		factor 	= (pos - 77) + 1;
+	}else if(val==9 && pos>84){
+		factor 	= (pos - 85) + 1;
+	}else if(val==10 && pos>93){
+		factor 	= (pos - 94) + 1;		
+	}else{
+		factor = 0;
+	}
+	left 	= 50 * factor;
+	izq 	= '-'+left+'px';
+	$(this).find('.lugar').css({'left':izq} );
+});
+
+$('.container-inner ul li a').on('mouseleave',function(){
+	$('section.box-fila .box-personas ul li a .lugar').css({'left':'auto'} );	
+});
+
+
 
 $('#busca-nombre')
     .formValidation({
@@ -461,28 +502,54 @@ $('#busca-nombre')
 		e.preventDefault();
 		    $("#busca-nombre button").html('<i class="fa fa fa-spinner fa-spin"></i>');
 			elrut = $('#elrut').val();
-			$.ajax({
-			    type: "POST",
-			    url: "ajax/validacodigo1.php",
-			    data: {'rut':elrut},
-			    success: function(msg) {
-			    	console.log(msg);
-			    	if(msg=='1'){
-						
-			    	}else{
-			        	alert("Este rut no se encuentra en la base de datos");
-			    	}
-			    },
-			    error: function(xhr, status, error) {
-					//alert(status);
-				}
+			
+			$.post('index.php?rut='+elrut, function(data){
+				pines = $(data).find(".container-inner");
+				$('.container-outer').html( $(pines).hide().fadeIn(1000));
+				$("#busca-nombre button").html('<i class="fa fa-search" aria-hidden="true"></i>');
+			
+    })
+    .find('[name="rut"]').mask('99999999-A');
+
+});
 
 
 
-			});
-		
-	    
-
+$('#busca-nombre2')
+    .formValidation({
+        framework: 'bootstrap',
+        excluded: ':disabled',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            rut: {
+                validators: {
+                    id: {
+                        country: 'CL',
+                        message: 'Rut Invalido'
+                    }
+                }
+            }
+        }
+    })
+    .on('err.field.fv', function(e, data) {
+            data.element
+                .data('fv.messages')
+                .find('.help-block[data-fv-for="' + data.field + '"]').hide();
+    })
+    .on('success.form.fv', function(e) {
+		e.preventDefault();
+		    $("#busca-nombre2 button").html('<i class="fa fa fa-spinner fa-spin"></i>');
+			elrut = $('#elrut').val();
+			
+			$.post('index.php?rut='+elrut, function(data){
+				pines = $(data).find(".container-inner");
+				$('.container-outer').html( $(pines).hide().fadeIn(1000));
+				$("#busca-nombre2 button").html('<i class="fa fa-search" aria-hidden="true"></i>');
+			
     })
     .find('[name="rut"]').mask('99999999-A');
 
