@@ -39,14 +39,16 @@
                            <img src="assets/img/productos/p7.png" class="center-block">
                          </div>
                          <div class="item">
-                           <img src="assets/img/productos/p8.png?v=2" class="center-block">
+                           <img src="assets/img/productos/p8.png" class="center-block">
                          </div>
                          <div class="item">
                            <img src="assets/img/productos/p9.png" class="center-block">
                          </div>
+<!--
                          <div class="item">
                            <img src="assets/img/productos/p10.png" class="center-block">
                          </div>
+-->
 		              </div> <!-- slider categoria -->
 		            </div> <!-- box slider -->
             	</div>

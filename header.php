@@ -23,20 +23,18 @@
 
     <!-- CSS -->
 
-    <link href="assets/css/formValidation.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/fonts.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/formValidation.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/fonts.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/hover-min.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.default.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.offcanvas.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/hover-min.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/owl.carousel.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/owl.theme.default.css" rel="stylesheet">
+    <link href="https://www.mckay.cl/assets/css/bootstrap.offcanvas.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-    <link href="assets/css/custom.css?v=2.2.5" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/img/favicon.ico">
+    <link href="https://www.mckay.cl/assets/css/custom.css?v=2.2.5" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
